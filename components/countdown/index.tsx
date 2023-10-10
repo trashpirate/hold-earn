@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import style from "./countdown.module.css";
+import styles from "./countdown.module.css";
 
 export default function CountdownTimer() {
   const [days, setDays] = useState(0);
@@ -31,15 +31,15 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       {expired ? (
-        <h2 className={style.countdown}>{`Token launched on October 10, 1PM CST}`}</h2>
+        <h2 className={styles.countdown}>{`Token launched on October 10, 1PM CST}`}</h2>
       ) : (
-        <h2 className={style.countdown}>{`TIME TO LAUNCH: ${days
+        <h2 className={styles.countdown}>{`${days.toString().padStart(2, "0")} DAYS ${hours
           .toString()
-          .padStart(2, "0")} DAYS ${hours.toString().padStart(2, "0")} HRS ${minutes
+          .padStart(2, "0")} HRS ${minutes.toString().padStart(2, "0")} MIN ${seconds
           .toString()
-          .padStart(2, "0")} MIN ${seconds.toString().padStart(2, "0")} SEC`}</h2>
+          .padStart(2, "0")} SEC`}</h2>
       )}
     </div>
   );
