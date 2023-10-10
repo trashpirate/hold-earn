@@ -24,6 +24,7 @@ export default function Home() {
               margin: "10px auto auto auto",
               borderRadius: "10px",
             }}
+            priority
           />
         </div>
 
