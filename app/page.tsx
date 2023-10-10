@@ -16,11 +16,13 @@ export default function Home() {
 
         <div className={styles.center}>
           <Image
-            src="/logo.jpg"
-            width={300}
-            height={300}
+            src="/logo_hero.jpg"
+            width={321}
+            height={560}
             alt="Plot NFTs"
             style={{
+              height: "300px",
+              width: "auto",
               margin: "10px auto auto auto",
               borderRadius: "10px",
             }}
@@ -40,7 +42,7 @@ export default function Home() {
             <button>AIRDROP</button>
           </Link>
         </div>
-        <div>
+        <div className={styles.countdown}>
           <h3>TOKEN LAUCH: 10/10/2023 9pm CST</h3>
           <CountdownTimer></CountdownTimer>
         </div>

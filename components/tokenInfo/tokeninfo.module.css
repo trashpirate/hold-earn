@@ -1,0 +1,23 @@
+.container {
+    font-size: 1.2rem;
+}
+.form {
+  height: 50px;
+  margin: auto;
+  color: #000;
+  text-align: left;
+}
+
+.form input {
+max-width: 350px;
+width: 100%;
+  padding: 2px;
+  text-indent: 3px;
+  border-color: #dddddd;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.reflections {
+    height: 100px;
+}

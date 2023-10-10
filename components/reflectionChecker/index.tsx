@@ -54,7 +54,7 @@ export default function ReflectionChecker() {
 
   return (
     <div className={styles.container}>
-      <h3>Reflection Checker</h3>
+      <h3>EARN Reflection Checker</h3>
       <form className={styles.form}>
         <input
           type="string"

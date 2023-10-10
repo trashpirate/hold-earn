@@ -45,15 +45,77 @@
   padding: 15px 25px;
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
+    position: relative;
+    /* z-index: 0; */
+}
+.buttons button:hover {
+  opacity: 0.7;
+}
+
+/* .buttons button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(6px);
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.buttons button:active {
+    color: #000
+}
+
+.buttons button:active:after {
+    background: transparent;
+}
+
+.buttons button:hover:before {
+    opacity: 1;
+}
+
+.buttons button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+} */
+
+.countdown {
+  margin: 20px 0px;
 }
 
 .tokenomics {
   margin: 30px 0;
+  
+}
+
+.tokenomics h3 {
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 1200px){
   .container {
-    width: 90%;
+    width: 85%;
   }
 }
 

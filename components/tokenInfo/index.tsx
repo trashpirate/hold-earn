@@ -3,6 +3,7 @@ import { useContractReads } from "wagmi";
 import { abi } from "../../assets/tokenABI";
 import { useState } from "react";
 import { formatEther } from "viem";
+import styles from "./tokeninfo.module.css";
 
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
 
@@ -35,7 +36,7 @@ export default function TokenInfo() {
   });
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>{`Tokens Burned: ${
         isLoading || burnBalance == null ? "Loading..." : burnBalance?.toLocaleString()
       } EARN`}</div>
