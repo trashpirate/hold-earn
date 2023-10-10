@@ -1,13 +1,9 @@
 "use client";
-import CursorAnimation from "@/components/cursorAnimation";
 import "./globals.css";
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
-import Script from "next/script";
 import { WagmiConfig, configureChains, createConfig, mainnet } from "wagmi";
-import { alchemyProvider } from "wagmi/providers/alchemy";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
-import { publicProvider } from "wagmi/providers/public";
 
 const apiKey = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 

@@ -6,13 +6,11 @@ import CopyToClipboard from "@/components/copyToClipboard";
 import Link from "next/link";
 import TokenInfo from "@/components/tokenInfo";
 import ReflectionChecker from "@/components/reflectionChecker";
-import Script from "next/script";
-import CursorAnimation from "@/components/cursorAnimation";
+
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <CursorAnimation></CursorAnimation>
       <div className={styles.container}>
         <h1>BUY, HOLD, EARN</h1>
         <div className={styles.description}></div>
