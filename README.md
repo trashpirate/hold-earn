@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/github/license/trashpirate/hold-earn)](https://github.com/trashpirate/hold-earn/blob/main/LICENSE)
 [![Twitter: N0\_crypto](https://img.shields.io/twitter/follow/N0\_crypto.svg?style=social)](https://twitter.com/N0\_crypto)
 
-> **Hold ($EARN)** is a reflection token. This repository is the website associated with the token and includes a reflection tracker including a tracker for the burn wallet. Users can also retrieve the reflection amounts of a given wallet. The Website was deployed on Vercel.
+> **Hold ($EARN)** is a ERC20 token with a new implmentation to provide reflections to users. This repository is the website associated with the token and includes a reflection tracker including a tracker for the burn wallet. Users can also retrieve the reflection amounts of a given wallet. The Website was deployed on Vercel.
 
 **Token Contract: Hold ($EARN)**  
 https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code
