@@ -40,14 +40,14 @@ export default function ReflectionChecker() {
     ],
     enabled: address != null && isAddress(address),
     onSuccess(data) {
-      setTotalReflections(Number(data[0].result));
+      setTotalReflections(data[0].result ? Number(formatEther(data[0].result)) : null);
       setTotalSupply(data[1].result ? Number(formatEther(data[1].result)) : null);
       setBalance(data[2].result ? Number(formatEther(data[2].result)) : null);
     },
   });
 
   if (totalReflections != null && totalSupply != null && balance != null) {
-    reflections = (balance / totalSupply) * totalReflections;
+    reflections = Math.round((balance / totalSupply) * totalReflections);
   } else {
     reflections = null;
   }
