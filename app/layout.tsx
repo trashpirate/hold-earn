@@ -61,12 +61,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <title>BUY HOLD EARN BURN</title>
-      <meta name="description" content="Buy, Hold, Earn, Burn" key="desc" />
+      <meta
+        name="description"
+        content="Hold ($EARN) is a reflection token - so buy, hold, earn, and burn!"
+        key="desc"
+      />
       <meta name="twitter:card" content="summary_large_image" key="twcard" />
       <meta name="twitter:creator" content="buyholdearn" key="twhandle" />
       <meta property="og:title" content="Buy, Hold, Earn, Burn" key="ogtitle" />
       <meta property="og:site_name" content="Buy, Hold, Earn, Burn" key="ogsitename" />
-      <meta property="og:description" content="Buy, Hold, Earn, Burn" key="ogdesc" />
+      <meta
+        property="og:description"
+        content="Hold ($EARN) is a reflection token - so buy, hold, earn, and burn!"
+        key="ogdesc"
+      />
       <meta property="og:url" content="https://buyholdearn.com/" key="ogurl" />
       <meta
         property="og:image"
