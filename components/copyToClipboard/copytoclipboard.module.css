@@ -5,9 +5,13 @@
 }
 
 .copy{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  vertical-align: middle;
     font-size: 24px;
   cursor:pointer;
-  width: 30px;
+  width: 150px;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s; /* Safari */
   opacity: 0.8;
@@ -21,8 +25,14 @@
 }
 
 .copy_icon {
+  margin: auto 0px;
     height: 100%;
     vertical-align: middle;
+}
+
+.notification {
+  font-size: 14px;
+  margin: auto 10px;
 }
 
 .container h3 {
