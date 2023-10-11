@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hold ($EARN) Website 🔥
+![Version](https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000)
+![Static Badge](https://img.shields.io/badge/node-v9.8.1-blue)
+![Static Badge](https://img.shields.io/badge/npm-v18.17.0-blue)
+![Static Badge](https://img.shields.io/badge/next-v13.4.4-blue)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/trashpirate/hold-earn#readme)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trashpirate/hold-earn/graphs/commit-activity)
+[![License: MIT](https://img.shields.io/github/license/trashpirate/hold-earn)](https://github.com/trashpirate/hold-earn/blob/main/LICENSE)
+[![Twitter: N0\_crypto](https://img.shields.io/twitter/follow/N0\_crypto.svg?style=social)](https://twitter.com/N0\_crypto)
 
-## Getting Started
+> **Hold ($EARN)** is a reflection token. This repository is the website associated with the token and includes a reflection tracker including a tracker for the burn wallet. Users can also retrieve the reflection amounts of a given wallet. The Website was deployed on Vercel.
 
-First, run the development server:
+**Token Contract: Hold ($EARN)**  
+https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code
+
+### ✨ [Website](https://www.buyholdearn.com)
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# development
+$ npm next dev
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# production mode
+$ npm next start
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👤 **Nadina Oates**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* Website: [nadinaoates.com](https://nadinaoates.com)
+* Twitter: [@N0\_crypto](https://twitter.com/N0\_crypto)
+* Github: [@trashpirate](https://github.com/trashpirate)
+* LinkedIn: [@nadinaoates](https://linkedin.com/in/nadinaoates)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions, issues and feature requests are welcome!
+
+Feel free to check [issues page](https://github.com/trashpirate/plot-minter/issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+
+## 📝 License
+
+Copyright © 2023 [Nadina Oates](https://github.com/trashpirate).
+
+This project is [MIT](https://github.com/trashpirate/betting-dapp-frontend/blob/master/LICENSE) licensed.
+
