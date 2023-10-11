@@ -19,15 +19,23 @@ export default function Home() {
             src="/logo_hero.jpg"
             width={321}
             height={560}
-            alt="Plot NFTs"
+            alt="Buy Hold Earn Burn"
             style={{
               height: "300px",
               width: "auto",
-              margin: "10px auto auto auto",
+              // margin: "10px auto auto auto",
               borderRadius: "10px",
             }}
             priority
           />
+          <div>
+            <TokenInfo></TokenInfo>
+          </div>
+        </div>
+        <div className={styles.token_info}>
+          <div>
+            <ReflectionChecker></ReflectionChecker>
+          </div>
         </div>
 
         <div className={styles.buttons}>
@@ -43,7 +51,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.countdown}>
-          <h3>TOKEN LAUCH: 10/10/2023 9pm CST</h3>
+          <h3>TOKEN LAUNCH: 10/10/2023 9pm CST</h3>
           <CountdownTimer></CountdownTimer>
         </div>
 
@@ -56,12 +64,6 @@ export default function Home() {
 
         <div className={styles.tokenomics}>
           <h3>TOKENOMICS: 1B SUPPLY. 2% REFLECTION TAX TO ALL HOLDERS. 50% BURNED.</h3>
-        </div>
-        <div>
-          <TokenInfo></TokenInfo>
-        </div>
-        <div>
-          <ReflectionChecker></ReflectionChecker>
         </div>
       </div>
     </main>

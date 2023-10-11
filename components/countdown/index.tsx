@@ -33,7 +33,7 @@ export default function CountdownTimer() {
   return (
     <div className={styles.container}>
       {expired ? (
-        <h2 className={styles.countdown}>{`Token launched on October 10, 1PM CST}`}</h2>
+        <h2 className={styles.countdown}>{`00 DAYS 00 HRS 00 MIN 00 SEC`}</h2>
       ) : (
         <h2 className={styles.countdown}>{`${days.toString().padStart(2, "0")} DAYS ${hours
           .toString()

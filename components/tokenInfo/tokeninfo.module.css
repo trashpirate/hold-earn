@@ -1,5 +1,6 @@
 .container {
     font-size: 1.2rem;
+    margin: 20px auto;
 }
 .form {
   height: 50px;

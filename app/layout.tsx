@@ -80,7 +80,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta property="og:image:type" content="image/png" />
 
       <WagmiConfig config={config}>
-        <body className={globalFont.className}>{children}</body>
+        <body className={globalFont.className}>
+          <div style={{ flexGrow: 1 }}>{children}</div>
+        </body>
       </WagmiConfig>
     </html>
   );
