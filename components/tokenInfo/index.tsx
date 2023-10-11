@@ -32,8 +32,6 @@ export default function TokenInfo() {
     onSuccess(data) {
       setTotalReflections(data[0].result ? Math.round(Number(formatEther(data[0].result))) : null);
       setBurnBalance(data[1].result ? Math.round(Number(formatEther(data[1].result))) : null);
-      console.log(burnBalance);
-      console.log(totalReflections);
     },
   });
 

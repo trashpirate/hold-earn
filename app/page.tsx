@@ -23,7 +23,7 @@ export default function Home() {
             style={{
               height: "300px",
               width: "auto",
-              // margin: "10px auto auto auto",
+              // margin: "10px auto 0PX auto",
               borderRadius: "10px",
             }}
             priority
@@ -46,14 +46,14 @@ export default function Home() {
             <button>X</button>
           </Link>
 
-          <Link href="https://opensea.io/collection/tgplots">
-            <button>AIRDROP</button>
+          <Link href="https://www.dextools.io/app/en/ether/pair-explorer/0x32558f1214bd874c6cbc1ab545b28a18990ff7ee">
+            <button>DEXTOOLS</button>
           </Link>
         </div>
-        <div className={styles.countdown}>
+        {/* <div className={styles.countdown}>
           <h3>TOKEN LAUNCH: 10/10/2023 9pm CST</h3>
           <CountdownTimer></CountdownTimer>
-        </div>
+        </div> */}
 
         <div>
           <CopyToClipboard
