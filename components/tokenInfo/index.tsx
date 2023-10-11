@@ -30,8 +30,10 @@ export default function TokenInfo() {
     ],
     watch: true,
     onSuccess(data) {
-      setTotalReflections(Number(data[0].result));
-      setBurnBalance(data[1].result ? Number(formatEther(data[1].result)) : null);
+      setTotalReflections(data[0].result ? Math.round(Number(formatEther(data[0].result))) : null);
+      setBurnBalance(data[1].result ? Math.round(Number(formatEther(data[1].result))) : null);
+      console.log(burnBalance);
+      console.log(totalReflections);
     },
   });
 
@@ -41,7 +43,7 @@ export default function TokenInfo() {
         isLoading || burnBalance == null ? "Loading..." : burnBalance?.toLocaleString()
       } EARN`}</div>
       <div>{`Total Reflections: ${
-        isLoading || totalReflections == null ? "Loading..." : totalReflections
+        isLoading || totalReflections == null ? "Loading..." : totalReflections.toLocaleString()
       } EARN`}</div>
     </div>
   );
