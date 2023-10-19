@@ -49,6 +49,9 @@ export default function Home() {
           <Link href="https://www.dextools.io/app/en/ether/pair-explorer/0x32558f1214bd874c6cbc1ab545b28a18990ff7ee">
             <button>DEXTOOLS</button>
           </Link>
+          <Link href="https://app.buyholdearn.com/">
+            <button>MINT</button>
+          </Link>
         </div>
         {/* <div className={styles.countdown}>
           <h3>TOKEN LAUNCH: 10/10/2023 9pm CST</h3>
