@@ -6,6 +6,7 @@ import CopyToClipboard from "@/components/copyToClipboard";
 import Link from "next/link";
 import TokenInfo from "@/components/tokenInfo";
 import ReflectionChecker from "@/components/reflectionChecker";
+import AnimatedCursor from "@/components/animatedCursor";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <div className={styles.container}>
         <h1>BUY, HOLD, EARN</h1>
         <div className={styles.description}></div>
-
+        <AnimatedCursor></AnimatedCursor>
         <div className={styles.center}>
           <Image
             src="/logo_hero.jpg"
