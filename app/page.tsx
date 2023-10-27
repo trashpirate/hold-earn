@@ -6,11 +6,12 @@ import CopyToClipboard from "@/components/copyToClipboard";
 import Link from "next/link";
 import TokenInfo from "@/components/tokenInfo";
 import ReflectionChecker from "@/components/reflectionChecker";
+import CollectionInfo from "@/components/nfts";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.container}>
+      <section className={styles.container}>
         <h1>BUY, HOLD, EARN</h1>
         <div className={styles.description}></div>
 
@@ -68,7 +69,10 @@ export default function Home() {
         <div className={styles.tokenomics}>
           <h3>TOKENOMICS: 1B SUPPLY. 2% REFLECTION TAX TO ALL HOLDERS. 50% BURNED.</h3>
         </div>
-      </div>
+      </section>
+      <section className={styles.container_nfts}>
+        <CollectionInfo></CollectionInfo>
+      </section>
     </main>
   );
 }
