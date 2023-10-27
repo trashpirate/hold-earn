@@ -52,6 +52,9 @@ export default function Home() {
           <Link href="https://app.buyholdearn.com/">
             <button>MINT</button>
           </Link>
+          <Link href="https://play.buyholdearn.com/">
+            <button>PLAY</button>
+          </Link>
         </div>
         {/* <div className={styles.countdown}>
           <h3>TOKEN LAUNCH: 10/10/2023 9pm CST</h3>
