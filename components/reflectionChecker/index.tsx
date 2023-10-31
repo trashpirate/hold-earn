@@ -1,10 +1,11 @@
 "use client";
 import { useContractReads } from "wagmi";
 import { abi } from "../../assets/tokenABI";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { formatEther, isAddress } from "viem";
 
 import styles from "./reflectionchecker.module.css";
+import { Alchemy, AssetTransfersCategory, AssetTransfersParams, Network } from "alchemy-sdk";
 
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
 let reflections: number | null;
@@ -14,43 +15,59 @@ const tokenContract = {
   abi: abi,
 };
 
+const config = {
+  apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
+  network: process.env.NEXT_PUBLIC_TESTNET == "true" ? Network.ETH_GOERLI : Network.ETH_MAINNET,
+};
+
+const alchemy = new Alchemy(config);
+
 export default function ReflectionChecker() {
   const [address, setAddress] = useState<string | null>(
     "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
   );
-  const [balance, setBalance] = useState<number | null>(null);
-  const [totalReflections, setTotalReflections] = useState<number | null>(null);
-  const [totalSupply, setTotalSupply] = useState<number | null>(null);
+  const [reflections, setReflections] = useState<number | null>(null);
 
-  const { data, isError, isLoading } = useContractReads({
-    contracts: [
-      {
-        ...tokenContract,
-        functionName: "totalFees",
-      },
-      {
-        ...tokenContract,
-        functionName: "totalSupply",
-      },
-      {
-        ...tokenContract,
-        functionName: "balanceOf",
-        args: [address as `0x${string}`],
-      },
-    ],
-    enabled: address != null && isAddress(address),
-    onSuccess(data) {
-      setTotalReflections(data[0].result ? Number(formatEther(data[0].result)) : null);
-      setTotalSupply(data[1].result ? Number(formatEther(data[1].result)) : null);
-      setBalance(data[2].result ? Number(formatEther(data[2].result)) : null);
-    },
-  });
+  useEffect(() => {
+    async function getReflections(account: string) {
+      const outData = await alchemy.core.getAssetTransfers({
+        fromBlock: "0x117486C",
+        fromAddress: account,
+        excludeZeroValue: true,
+        contractAddresses: [TOKEN_ADDRESS],
+        category: [AssetTransfersCategory.ERC20],
+      });
+      let totalOutSum: number = 0;
+      for (let tx of outData.transfers) {
+        if (tx.value != null) totalOutSum += tx.value;
+      }
 
-  if (totalReflections != null && totalSupply != null && balance != null) {
-    reflections = Math.round((balance / totalSupply) * totalReflections);
-  } else {
-    reflections = null;
-  }
+      const inData = await alchemy.core.getAssetTransfers({
+        fromBlock: "0x117486C",
+        toAddress: account,
+        excludeZeroValue: true,
+        contractAddresses: [TOKEN_ADDRESS],
+        category: [AssetTransfersCategory.ERC20],
+      });
+      let totalInSum: number = 0;
+      for (let tx of inData.transfers) {
+        if (tx.value != null) totalInSum += tx.value;
+      }
+      const pureBalance = totalInSum - totalOutSum;
+
+      const accData = await alchemy.core.getTokenBalances(account, [TOKEN_ADDRESS]);
+      const balanceBigint = accData.tokenBalances[0].tokenBalance;
+      let reflect: number | null = null;
+      if (balanceBigint != null) {
+        const balance = Number(formatEther(BigInt(balanceBigint)));
+        reflect = balance - pureBalance;
+      }
+      setReflections(reflect);
+    }
+    if (isAddress(address as string)) {
+      getReflections(address as string);
+    }
+  }, [address]);
 
   return (
     <div className={styles.container}>
@@ -66,7 +83,7 @@ export default function ReflectionChecker() {
       </form>
 
       <div className={styles.reflections}>{`${
-        reflections != undefined ? "Reflections: " + reflections?.toLocaleString() + " EARN" : ""
+        reflections != null ? "Reflections: " + reflections?.toLocaleString() + " EARN" : ""
       }`}</div>
     </div>
   );

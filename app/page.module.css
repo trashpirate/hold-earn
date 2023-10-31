@@ -30,12 +30,14 @@
   font-size: 1.5rem; 
 }
 
-.token_info {
-  display: flex;
+.reflections {
+  max-width: 340px;
+  /* width: fit-content; */
+  /* display: flex;
   flex-direction: row;
   gap: 100px;
   flex-wrap: wrap;
-  justify-content: top;
+  justify-content: top; */
 }
 
 .buttons {
@@ -43,7 +45,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .buttons button {
