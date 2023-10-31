@@ -39,6 +39,9 @@ export default function Home() {
         </div>
 
         <div className={styles.buttons}>
+          <Link href="/EARN_WHITE_PAPER.pdf">
+            <button>WHITE PAPER</button>
+          </Link>
           <Link href="https://t.me/buyholdearn">
             <button>TELEGRAM</button>
           </Link>
