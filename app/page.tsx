@@ -32,7 +32,7 @@ export default function Home() {
             <TokenInfo></TokenInfo>
           </div>
         </div>
-        <div className={styles.token_info}>
+        <div className={styles.reflections}>
           <div>
             <ReflectionChecker></ReflectionChecker>
           </div>
