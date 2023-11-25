@@ -39,7 +39,10 @@ export default function ReflectionChecker() {
       });
       let totalOutSum: number = 0;
       for (let tx of outData.transfers) {
-        if (tx.value != null) totalOutSum += tx.value;
+        if (tx.value != null) {
+          totalOutSum += tx.value;
+          // console.log("out: " + tx.value);
+        }
       }
 
       const inData = await alchemy.core.getAssetTransfers({
@@ -51,16 +54,23 @@ export default function ReflectionChecker() {
       });
       let totalInSum: number = 0;
       for (let tx of inData.transfers) {
-        if (tx.value != null) totalInSum += tx.value;
+        if (tx.value != null) {
+          totalInSum += tx.value;
+          // console.log("in: " + tx.value);
+        }
       }
       const pureBalance = totalInSum - totalOutSum;
+      // console.log(pureBalance);
 
       const accData = await alchemy.core.getTokenBalances(account, [TOKEN_ADDRESS]);
       const balanceBigint = accData.tokenBalances[0].tokenBalance;
       let reflect: number | null = null;
       if (balanceBigint != null) {
         const balance = Number(formatEther(BigInt(balanceBigint)));
+        // console.log(balance);
         reflect = balance - pureBalance;
+        if (reflect < 0) reflect = 0;
+        // console.log(reflect);
       }
       setReflections(reflect);
     }
