@@ -31,38 +31,42 @@ export default function ReflectionChecker() {
   useEffect(() => {
     async function getReflections(account: string) {
       const outData = await alchemy.core.getAssetTransfers({
-        fromBlock: "0x117486C",
+        fromBlock: "0x1174868",
         fromAddress: account,
         excludeZeroValue: true,
         contractAddresses: [TOKEN_ADDRESS],
         category: [AssetTransfersCategory.ERC20],
       });
       let totalOutSum: number = 0;
+      let count: number = 0;
       for (let tx of outData.transfers) {
         if (tx.value != null) {
           totalOutSum += tx.value / 0.98;
-          // console.log("out: " + tx.value);
+          console.log(count + " - out: " + tx.value);
+          count++;
         }
       }
       // console.log("total out: " + totalOutSum);
 
       const inData = await alchemy.core.getAssetTransfers({
-        fromBlock: "0x117486C",
+        fromBlock: "0x1174868",
         toAddress: account,
         excludeZeroValue: true,
         contractAddresses: [TOKEN_ADDRESS],
         category: [AssetTransfersCategory.ERC20],
       });
       let totalInSum: number = 0;
+      count = 0;
       for (let tx of inData.transfers) {
         if (tx.value != null) {
           totalInSum += tx.value;
-          // console.log("in: " + tx.value);
+          console.log(count + " - in: " + tx.value);
+          count++;
         }
       }
       // console.log("total in: " + totalInSum);
       const pureBalance = totalInSum - totalOutSum;
-      // console.log("pure balance: " + pureBalance);
+      console.log("pure balance: " + pureBalance);
 
       const accData = await alchemy.core.getTokenBalances(account, [TOKEN_ADDRESS]);
       const balanceBigint = accData.tokenBalances[0].tokenBalance;
