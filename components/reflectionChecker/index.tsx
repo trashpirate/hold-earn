@@ -38,6 +38,10 @@ export default function ReflectionChecker() {
         category: [AssetTransfersCategory.ERC20],
       });
       let totalOutSum: number = 0;
+      let tax = 0.98;
+      if (account == "0x0cf66382d52C2D6c1D095c536c16c203117E2B2f") {
+        tax = 1;
+      }
       for (let tx of outData.transfers) {
         if (tx.value != null) {
           totalOutSum += tx.value / 0.98;
