@@ -44,7 +44,7 @@ export default function ReflectionChecker() {
       }
       for (let tx of outData.transfers) {
         if (tx.value != null) {
-          totalOutSum += tx.value / 0.98;
+          totalOutSum += tx.value / tax;
           // console.log("out: " + tx.value);
         }
       }
