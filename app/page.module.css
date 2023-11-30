@@ -9,6 +9,18 @@
   background-color: var(--bg-color);
 }
 
+.home {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+}
+
+.right {
+  justify-content: center;
+  align-items: middle;
+  margin: auto;
+}
+
 .container {
   top: 0;
   display: flex;
@@ -27,7 +39,7 @@
 }
 .container h3 {
   font-weight: 400;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 .reflections {
@@ -56,8 +68,8 @@
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
-    position: relative;
-    /* z-index: 0; */
+  position: relative;
+  /* z-index: 0; */
 }
 .buttons button:hover {
   opacity: 0.7;
@@ -116,22 +128,19 @@
 
 .tokenomics {
   margin: 30px 0;
-  
 }
 
 .tokenomics h3 {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
   .container {
     width: 85%;
   }
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
   .token_info {
-     gap: 10px;
+    gap: 10px;
   }
 }
-
-

@@ -31,7 +31,7 @@ export default function ReflectionChecker() {
   useEffect(() => {
     async function getReflections(account: string) {
       const outData = await alchemy.core.getAssetTransfers({
-        fromBlock: "0x117486C",
+        fromBlock: "0x1174868",
         fromAddress: account,
         excludeZeroValue: true,
         contractAddresses: [TOKEN_ADDRESS],
@@ -44,14 +44,14 @@ export default function ReflectionChecker() {
       }
       for (let tx of outData.transfers) {
         if (tx.value != null) {
-          totalOutSum += tx.value / 0.98;
+          totalOutSum += tx.value / tax;
           // console.log("out: " + tx.value);
         }
       }
       // console.log("total out: " + totalOutSum);
 
       const inData = await alchemy.core.getAssetTransfers({
-        fromBlock: "0x117486C",
+        fromBlock: "0x1174868",
         toAddress: account,
         excludeZeroValue: true,
         contractAddresses: [TOKEN_ADDRESS],
@@ -66,7 +66,7 @@ export default function ReflectionChecker() {
       }
       // console.log("total in: " + totalInSum);
       const pureBalance = totalInSum - totalOutSum;
-      // console.log("pure balance: " + pureBalance);
+      console.log("pure balance: " + pureBalance);
 
       const accData = await alchemy.core.getTokenBalances(account, [TOKEN_ADDRESS]);
       const balanceBigint = accData.tokenBalances[0].tokenBalance;
