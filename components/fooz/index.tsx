@@ -8,7 +8,7 @@ export default function Fooz({}: Props) {
   return (
     <div>
       <Iframe
-        width="400"
+        width="320"
         height="750"
         display="inline"
         styles={{ borderRadius: "15px", borderWidth: "0px" }}
