@@ -38,12 +38,10 @@ export default function ReflectionChecker() {
         category: [AssetTransfersCategory.ERC20],
       });
       let totalOutSum: number = 0;
-      let count: number = 0;
       for (let tx of outData.transfers) {
         if (tx.value != null) {
           totalOutSum += tx.value / 0.98;
-          console.log(count + " - out: " + tx.value);
-          count++;
+          // console.log("out: " + tx.value);
         }
       }
       // console.log("total out: " + totalOutSum);
@@ -56,12 +54,10 @@ export default function ReflectionChecker() {
         category: [AssetTransfersCategory.ERC20],
       });
       let totalInSum: number = 0;
-      count = 0;
       for (let tx of inData.transfers) {
         if (tx.value != null) {
           totalInSum += tx.value;
-          console.log(count + " - in: " + tx.value);
-          count++;
+          // console.log("in: " + tx.value);
         }
       }
       // console.log("total in: " + totalInSum);
