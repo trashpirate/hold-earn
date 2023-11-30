@@ -13,6 +13,7 @@
   margin-top: 20px;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .right {
