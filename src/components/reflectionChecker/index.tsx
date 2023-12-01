@@ -86,11 +86,11 @@ export default function ReflectionChecker() {
   }, [address]);
 
   return (
-    <div className=" bg-slate-800 p-4 rounded-lg text-slate-400 h-fit">
+    <div className=" bg-white/5 p-4 rounded-lg  h-fit">
       <h3 className="font-bold text-lg">EARN Reflection Checker</h3>
       <form >
         <input
-          className='w-full h-8 p-2 indent-1 border-slate-200 rounded-md text-black'
+          className='w-full h-8 p-2 indent-1 border-gray-300 rounded-md text-black'
           type="string"
           placeholder="Enter wallet address"
           onChange={(e) => {
