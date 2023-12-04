@@ -6,7 +6,7 @@ type Props = {};
 export default function Buy({}: Props) {
 
     return (
-        <section id="buy" className='my-16 px-7 flex justify-center'>
+        <section id="buy" className='my-16 px-7 flex justify-center scroll-m-36'>
             <div className='max-w-5xl w-full grid sm:grid-cols-2'>
                 <div className='flex justify-center sm:justify-start align-middle my-16'>
                     <div className='my-auto'>
