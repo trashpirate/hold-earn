@@ -7,6 +7,7 @@ import {SocialIcon} from 'react-social-icons';
 import Link from 'next/link';
 import ChartButton from '../buttons/chartButton';
 import CopyToClipboard from '../copyToClipboard';
+import NftButton from '../buttons/nftButton';
 type Props = {};
 
 export default function Introduction({}: Props) {
@@ -44,8 +45,11 @@ export default function Introduction({}: Props) {
             <CopyToClipboard
             text="CA: 0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
             copyText="0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
-          />
-            <ChartButton></ChartButton>
+            />
+            <div className='flex gap-5'>
+              <ChartButton></ChartButton>
+            <NftButton></NftButton>
+            </div>
             
           </div>
           

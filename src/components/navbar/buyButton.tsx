@@ -6,13 +6,13 @@ var classNames = require('classnames');
 
 export default function BuyButton() {
   return (
-      <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-50">
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="relative flex rounded-md bg-white/5 backdrop-blur text-sm">
-                      <div className="px-3 py-2 w-max flex items-center gap-2 bg-white/5 backdrop-blur rounded-md xxs:border-l-orange-500 xxs:border-l-2">
+                    <Menu.Button className="relative flex rounded-md bg-white/5 text-sm">
+                      <div className="px-3 py-2 w-max flex items-center gap-2 bg-white/5 rounded-md xxs:border-l-orange-500 xxs:border-l-2">
                         <Link className="font-bold hidden xxs:inline" href="#">BUY $EARN</Link>
                         <PlusIcon className="h-4 xs:h-6 w-4 xs:w-6 text-orange-500" aria-hidden="true" />
                       </div>
@@ -28,12 +28,12 @@ export default function BuyButton() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white/5 backdrop-blur py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-orange-500/50 backdrop-blur-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
-                            className={classNames(active ? 'bg-white/5 backdrop-blur' : '', 'block px-4 py-2 text-sm text-gray-300')}
+                            className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                           >
                             Buy on Uniswap
                           </a>
@@ -43,9 +43,9 @@ export default function BuyButton() {
                         {({ active }) => (
                           <a
                             href="https://flooz.xyz/trade/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E?network=eth"
-                            className={classNames(active ? 'bg-white/5 backdrop-blur' : '', 'block px-4 py-2 text-sm text-gray-300')}
+                            className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                           >
-                            Buy on Flooz
+                            Buy on Fooz
                           </a>
                         )}
                       </Menu.Item>

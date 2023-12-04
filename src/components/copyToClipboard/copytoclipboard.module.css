@@ -27,11 +27,15 @@
   margin: auto 0px;
     height: 100%;
     vertical-align: middle;
+    color: #FF6B10;
+    opacity: 0.6;
 }
 
 .notification {
   font-size: 14px;
   margin: auto 10px;
+  color: #FF6B10;
+  opacity: 0.6;
 }
 
 .container h3 {
@@ -41,6 +45,12 @@
     word-break: break-all;
     overflow:hidden;
     white-space: nowrap;
+    color: #FF6B10;
+    opacity: 0.6;
+}
+
+.container h3:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 770px){

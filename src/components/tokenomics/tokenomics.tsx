@@ -109,8 +109,8 @@ export default function Tokenomics({}: Props) {
 
 
                 </div>
-                <div className='flex justify-center my-16 w-full'>
-                    <div id="reflections" className='w-full max-w-lg'>
+                <div id="reflections" className='flex justify-center my-16 w-full scroll-m-36'>
+                    <div className='w-full max-w-lg'>
                         <ReflectionChecker></ReflectionChecker>
                     </div>
                 </div>

@@ -1,11 +1,9 @@
 "use client";
-import { useContractReads } from "wagmi";
 import { abi } from "../../assets/tokenABI";
 import { useEffect, useState } from "react";
 import { formatEther, isAddress } from "viem";
 
-import styles from "./reflectionchecker.module.css";
-import { Alchemy, AssetTransfersCategory, AssetTransfersParams, Network } from "alchemy-sdk";
+import { Alchemy, AssetTransfersCategory, Network } from "alchemy-sdk";
 
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
 let reflections: number | null;

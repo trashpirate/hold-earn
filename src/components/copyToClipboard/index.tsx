@@ -18,7 +18,7 @@ export default function CopyToClipboard(props: { text: string; copyText: string 
 
   return (
     <div className={styles.container}>
-      <h3>{props.text}</h3>
+      <h3 onClick={copylink} >{props.text}</h3>
       <div onClick={copylink} className={styles.copy}>
         <div className={styles.copy_icon}>
           <BiCopy />
