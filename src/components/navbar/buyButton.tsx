@@ -11,8 +11,8 @@ export default function BuyButton() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="relative flex rounded-full bg-gray-900 text-sm">
-                      <div className="px-3 py-2 w-max flex items-center gap-2 bg-slate-800 rounded-md xxs:border-l-orange-500 xxs:border-l-2">
+                    <Menu.Button className="relative flex rounded-md bg-white/5 backdrop-blur text-sm">
+                      <div className="px-3 py-2 w-max flex items-center gap-2 bg-white/5 backdrop-blur rounded-md xxs:border-l-orange-500 xxs:border-l-2">
                         <Link className="font-bold hidden xxs:inline" href="#">BUY $EARN</Link>
                         <PlusIcon className="h-4 xs:h-6 w-4 xs:w-6 text-orange-500" aria-hidden="true" />
                       </div>
@@ -28,12 +28,12 @@ export default function BuyButton() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white/5 backdrop-blur py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
-                            className={classNames(active ? 'bg-gray-900' : '', 'block px-4 py-2 text-sm text-gray-300')}
+                            className={classNames(active ? 'bg-white/5 backdrop-blur' : '', 'block px-4 py-2 text-sm text-gray-300')}
                           >
                             Buy on Uniswap
                           </a>
@@ -43,7 +43,7 @@ export default function BuyButton() {
                         {({ active }) => (
                           <a
                             href="https://flooz.xyz/trade/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E?network=eth"
-                            className={classNames(active ? 'bg-gray-900' : '', 'block px-4 py-2 text-sm text-gray-300')}
+                            className={classNames(active ? 'bg-white/5 backdrop-blur' : '', 'block px-4 py-2 text-sm text-gray-300')}
                           >
                             Buy on Fooz
                           </a>

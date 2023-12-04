@@ -52,7 +52,7 @@ export default function Tokenomics({}: Props) {
     };
 
     return (
-        <section className='mt-16 px-7 flex justify-center'>
+        <section id="tokenomics" className='mt-16 px-7 flex justify-center'>
             <div className='max-w-7xl w-full'>
                 <div>
                     <div className='flex justify-center'>
