@@ -52,30 +52,22 @@ export default function Tokenomics({}: Props) {
     };
 
     return (
-        <section id="tokenomics" className='mt-16 px-7 flex justify-center'>
+        <section id="tokenomics" className='mt-36 px-7 flex justify-center scroll-m-36'>
             <div className='max-w-7xl w-full'>
                 <div>
                     <div className='flex justify-center'>
                         <h1 className='text-4xl font-bold'>TOKENOMICS</h1>
                     </div>
-                    <div className='flex justify-center mt-8'>
-                        <Image
-                            src="/smoke_vertical.png"
-                            width={605}
-                            height={658}
-                            style={{width: "100px", height: "auto"}}
-                            alt="flame"
-
-                        /></div>
+                    <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-100 animate-pulse" />
                 </div>
 
-                <div className='mt-8 relative flex justify-center'>
+                <div className='mt-16 relative flex justify-center'>
                     <Image
-                        className='absolute h-96 w-96 top-1/3'
+                        className='absolute h-96 w-96 top-1/4'
                         src="/featured_image.jpg"
                         width={605}
                         height={658}
-                        style={{width: "200px", height: "auto"}}
+                        style={{width: "250px", height: "auto"}}
                         alt="flame"
 
                     />

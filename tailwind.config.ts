@@ -10,7 +10,11 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/flame.gif')",
-        "card": "url('/smoke_orange.png')",
+        "nft-collection": "url('/FLAMES_dark.jpg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+      },
+      boxShadow: {
+        glow: "0 35px 60px -15px rgba(255,107,16, 1)"
       },
       fontFamily: {
         body: ["IBM Plex Sans"],

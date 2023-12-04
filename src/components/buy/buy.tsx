@@ -6,22 +6,22 @@ type Props = {};
 
 export default function Buy({}: Props) {
 
-    const [panelWidth, setPanelWidth] = useState("420");
+    // const [panelWidth, setPanelWidth] = useState("420");
 
-    const screenSize = useScreenSize();
+    // const screenSize = useScreenSize();
 
-    useEffect(() => {
-        if (screenSize.width <= 450) {
-            setPanelWidth("320");
-        }
-        else {
-            setPanelWidth("420");
-        }
-    }, [screenSize]);
+    // useEffect(() => {
+    //     if (screenSize.width <= 450) {
+    //         setPanelWidth("320");
+    //     }
+    //     else {
+    //         setPanelWidth("420");
+    //     }
+    // }, [screenSize]);
 
 
     return (
-        <section className='my-16 px-7 flex justify-center'>
+        <section id="buy" className='my-16 px-7 flex justify-center'>
             <div className='max-w-5xl w-full grid sm:grid-cols-2'>
                 <div className='flex justify-center sm:justify-start align-middle my-16'>
                     <div className='my-auto'>
@@ -39,13 +39,14 @@ export default function Buy({}: Props) {
                 </div>
                 <div className='flex justify-center sm:justify-end'>
                     <Iframe
-                        width={panelWidth}
-                        height="720"
+                        width="320"
+                        height="650"
                         display="inline"
                         styles={{borderRadius: "15px", borderWidth: "0px"}}
                         allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *"
-                        url="https://flooz.xyz/embed/trade?swapDisabled=false&swapToTokenAddress=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&swapLockToToken=false&onRampDisabled=false&onRampAsDefault=false&onRampTokenAddress=eth&stakeDisabled=true&network=eth&lightMode=false&primaryColor=%23ffa200&backgroundColor=transparent&roundedCorners=10&padding=20&refId=Q0blsH"
+                        url="https://flooz.xyz/embed/trade?swapDisabled=false&swapToTokenAddress=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&swapLockToToken=false&onRampDisabled=false&onRampAsDefault=false&onRampTokenAddress=eth&stakeDisabled=true&network=eth&lightMode=false&primaryColor=%23ff6b10&backgroundColor=transparent&roundedCorners=10&padding=20&refId=Q0blsH"
                     ></Iframe>
+                    
                 </div>
 
             </div>

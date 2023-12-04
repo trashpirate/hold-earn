@@ -14,6 +14,7 @@ import Buy from "@/components/buy/buy";
 import Products from "@/components/products/products";
 import Partners from "@/components/partners/partners";
 import Whitepaper from "@/components/whitepaper/whitepaper";
+import Footer from "@/components/footer/footer";
 
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
       <Buy></Buy>
       <Products></Products>
       <Partners></Partners>
-      <Whitepaper></Whitepaper>
+      <Footer></Footer>
     </main>
   );
 }
