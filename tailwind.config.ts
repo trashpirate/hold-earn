@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/flame.gif')",
+        "card": "url('/smoke_orange.png')",
       },
       fontFamily: {
         body: ["IBM Plex Sans"],

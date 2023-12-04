@@ -49,8 +49,8 @@ inherently deflationary.
         </div>
         <Image
             src="/featured_image.jpg"
-            width={412}
-            height={732}
+            width={605}
+            height={658}
             style={{width: "20%", height: "auto", margin: "auto 100px auto 50px"}}
             alt="flame"
           />

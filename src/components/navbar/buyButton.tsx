@@ -32,7 +32,7 @@ export default function BuyButton() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
                             className={classNames(active ? 'bg-gray-900' : '', 'block px-4 py-2 text-sm text-gray-300')}
                           >
                             Buy on Uniswap
@@ -42,7 +42,7 @@ export default function BuyButton() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="https://flooz.xyz/trade/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E?network=eth"
                             className={classNames(active ? 'bg-gray-900' : '', 'block px-4 py-2 text-sm text-gray-300')}
                           >
                             Buy on Fooz
