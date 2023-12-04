@@ -13,10 +13,10 @@ type Props = {};
 export default function Introduction({}: Props) {
 
   return (
-    <section id="introduction" className='px-7 my-16'>
+    <section id="introduction" className='px-7 my-16 scroll-m-36'>
       <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary mt-24 rounded-2xl relative justify-between">
         <div className='my-8 lg:my-16 mx-4 sm:mx-8 xl:ml-16 col-start-1 row-start-1 z-10 sm:max-w-2xl'>
-          <div className='my-4 flex gap-4 w-full'>
+          <div className='my-4 flex gap-4 w-full pl-1'>
             <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="Telegram" />
             <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="X" />
             <Link href="https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code">
@@ -34,7 +34,7 @@ export default function Introduction({}: Props) {
           <div className='w-full h-auto p-1'>
 
             <h1 className='text-4xl font-bold'>BUY, HOLD, EARN</h1>
-            <h2 className='text-2xl leading-10'>The Best Reflection Token on Ethereum</h2>
+            <h2 className='text-2xl leading-10'>The Best Reflection Token</h2>
             <p className='leading-7 mt-4 text-md'>EARN ($EARN) is a symbol of resilience, a tribute to those who have remained
               steadfast during a prolonged crypto bear market. EARN is not just a token; it&apos;s a
               testament to the strength of the crypto community. EARN is dedicated to everyone who
