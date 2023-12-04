@@ -12,7 +12,7 @@ type Props = {};
 export default function Introduction({}: Props) {
 
   return (
-    <section id="introduction" className='px-7 mb-16'>
+    <section id="introduction" className='px-7 my-16'>
       <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary mt-24 rounded-2xl relative justify-between">
         <div className='my-8 lg:my-16 mx-4 sm:mx-8 xl:ml-16 col-start-1 row-start-1 z-10 sm:max-w-2xl'>
           <div className='my-4 flex gap-4 w-full'>

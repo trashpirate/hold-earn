@@ -1,24 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Iframe from 'react-iframe';
-import useScreenSize from './useScreenSize';
 import Image from 'next/image';
 type Props = {};
 
 export default function Buy({}: Props) {
-
-    // const [panelWidth, setPanelWidth] = useState("420");
-
-    // const screenSize = useScreenSize();
-
-    // useEffect(() => {
-    //     if (screenSize.width <= 450) {
-    //         setPanelWidth("320");
-    //     }
-    //     else {
-    //         setPanelWidth("420");
-    //     }
-    // }, [screenSize]);
-
 
     return (
         <section id="buy" className='my-16 px-7 flex justify-center'>
@@ -39,8 +24,7 @@ export default function Buy({}: Props) {
                 </div>
                 <div className='flex justify-center sm:justify-end'>
                     <Iframe
-                        width="320"
-                        height="650"
+                        className='w-full h-[650px]'
                         display="inline"
                         styles={{borderRadius: "15px", borderWidth: "0px"}}
                         allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *"
