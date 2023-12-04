@@ -45,7 +45,7 @@ export default function BuyButton() {
                             href="https://flooz.xyz/trade/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E?network=eth"
                             className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                           >
-                            Buy on Fooz
+                            Buy on Flooz
                           </a>
                         )}
                       </Menu.Item>
