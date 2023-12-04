@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.copy{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  vertical-align: middle;
+    font-size: 18px;
+  cursor:pointer;
+  width: fit-content;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  opacity: 0.8;
+  margin: auto 5px;
+  transform: translate(0px,0px);
+}
+
+.copy:hover {
+  transition-duration: 0.1s;
+  opacity: 1;
+}
+
+.copy_icon {
+  margin: auto 0px;
+    height: 100%;
+    vertical-align: middle;
+    color: #FF6B10;
+    opacity: 0.6;
+}
+
+.notification {
+  font-size: 14px;
+  margin: auto 10px;
+  color: #FF6B10;
+  opacity: 0.6;
+}
+
+.container h3 {
+    text-overflow: ellipsis;  
+    margin-bottom: auto auto 12px auto;
+    cursor: pointer;          
+    word-break: break-all;
+    overflow:hidden;
+    white-space: nowrap;
+    color: #FF6B10;
+    opacity: 0.6;
+}
+
+.container h3:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 770px){
+  .container {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .container {
+    max-width: 200px;
+  }
+}
+

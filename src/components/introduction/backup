@@ -1,0 +1,61 @@
+import React, {useCallback, useState} from 'react';
+import Cropper from 'react-easy-crop';
+import {Point, Area} from "react-easy-crop";
+import HeroFlame from './heroFlame';
+import Image from 'next/image';
+import {SocialIcon} from 'react-social-icons';
+import Link from 'next/link';
+type Props = {};
+
+export default function Introduction({}: Props) {
+
+  return (
+    <div id="introduction" className='xl:px-0 px-7'>
+      <div className="h-auto max-h-[32rem] w-full flex flex-wrap items-center max-w-7xl mx-auto border border-primary mt-24 rounded-2xl relative justify-between overflow-hidden">
+        <Image
+            src="/flame.gif"
+            width={412}
+            height={732}
+            style={{width: "400px", height: "auto", margin: "auto 20px auto 40px", transform: "translate( -3rem, -10rem)"}}
+            alt="flame"
+            className='object-cover'
+          />
+        <div className='my-8'>
+          <div className='my-4 flex gap-4'>
+            <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="Telegram"/>
+            <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="X"/>
+            <Link href="https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code">
+              <Image
+            src="/etherscan.png"
+            width={122}
+            height={122}
+            style={{width: "25px", height: "auto", opacity: "0.8"}}
+            alt="etherscan"
+          />
+            </Link>
+            
+          </div>
+          
+          <h1 className='text-4xl'>BUY, HOLD, EARN</h1>
+          <h2 className='text-2xl'>The Best Reflection Token on Ethereum</h2>
+          <p className='w-96 leading-7 mt-4'>EARN ($EARN) is a symbol of resilience, a tribute to those who have remained
+steadfast during a prolonged crypto bear market. EARN is not just a token; it's a
+testament to the strength of the crypto community. EARN is dedicated to everyone who
+has kept the flame of hope burning in the crypto world. With a total supply of 1 billion
+tokens, EARN's journey begins with an initial burn of 500 million tokens, making it
+inherently deflationary.
+</p>
+          
+        </div>
+        <Image
+            src="/featured_image.jpg"
+            width={605}
+            height={658}
+            style={{width: "20%", height: "auto", margin: "auto 100px auto 50px"}}
+            alt="flame"
+          />
+      </div>
+    </div>
+
+  );
+}
