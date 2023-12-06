@@ -81,7 +81,7 @@ export default function Tokenomics({}: Props) {
                                 <h1 className='text-gray-300'>Symbol:</h1><h1 className='font-bold'>EARN</h1>
                             </div>
                             <div className="h-16 flex items-center gap-5 rounded-md border-l-2 border-primary bg-white/5 backdrop-blur px-5 w-full">
-                                <h1 className='text-gray-300'>Decimals:</h1><h1 className='font-bold'>18</h1>
+                                <h1 className='text-gray-300'>Slippage:</h1><h1 className='font-bold'>3%</h1>
                             </div>
                             <div className="h-16 flex items-center gap-5 rounded-md border-l-2 border-primary bg-white/5 backdrop-blur px-5 w-full">
                                 <h1 className='text-gray-300'>Network:</h1><h1 className='font-bold'>Ethereum</h1>
