@@ -35,7 +35,7 @@ export default function Introduction({}: Props) {
 
             <h1 className='text-4xl font-bold'>BUY, HOLD, EARN</h1>
             <h2 className='text-2xl leading-10'>The True and Best Reflection Token</h2>
-            <p className='leading-7 mt-4 text-md'>EARN ($EARN) is a symbol of resilience, a tribute to those who have remained
+            <p className='leading-7 mt-4 text-md'>HOLD (EARN) is a symbol of resilience, a tribute to those who have remained
               steadfast during a prolonged crypto bear market. EARN is not just a token; it&apos;s a
               testament to the strength of the crypto community. EARN is dedicated to everyone who
               has kept the flame of hope burning in the crypto world. With a total supply of 1 billion
