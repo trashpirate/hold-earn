@@ -1,4 +1,3 @@
-var classNames = require('classnames');
 import Link from 'next/link';
 import React from 'react';
 import {SocialIcon} from 'react-social-icons';

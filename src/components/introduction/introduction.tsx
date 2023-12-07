@@ -1,7 +1,4 @@
-import React, {useCallback, useState} from 'react';
-import Cropper from 'react-easy-crop';
-import {Point, Area} from "react-easy-crop";
-import HeroFlame from './heroFlame';
+import React from 'react';
 import Image from 'next/image';
 import {SocialIcon} from 'react-social-icons';
 import Link from 'next/link';
