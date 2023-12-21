@@ -43,9 +43,10 @@ export default function Introduction({}: Props) {
             text="CA: 0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
             copyText="0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
             />
-            <div className='flex gap-5'>
+            <div className='flex gap-5 flex-wrap'>
               <ChartButton></ChartButton>
-            <NftButton></NftButton>
+            <NftButton url="https://app.buyholdearn.com/" name="Flames"></NftButton>
+            <NftButton url="https://flame.buyholdearn.com/" name="Flamelings"></NftButton>
             </div>
             
           </div>
