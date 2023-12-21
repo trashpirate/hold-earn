@@ -50,7 +50,7 @@ $ npm next start
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/trashpirate/plot-minter/issues). 
+Feel free to check [issues page](https://github.com/trashpirate/hold-earn/issues). 
 
 ## Show your support
 
