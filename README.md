@@ -1,12 +1,16 @@
 # Hold ($EARN) Website 🔥
-![Version](https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000)
-![Static Badge](https://img.shields.io/badge/node-v9.8.1-blue)
-![Static Badge](https://img.shields.io/badge/npm-v18.17.0-blue)
-![Static Badge](https://img.shields.io/badge/next-v13.4.4-blue)
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/trashpirate/hold-earn#readme)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/trashpirate/hold-earn/graphs/commit-activity)
-[![License: MIT](https://img.shields.io/github/license/trashpirate/hold-earn)](https://github.com/trashpirate/hold-earn/blob/main/LICENSE)
-[![Twitter: N0\_crypto](https://img.shields.io/twitter/follow/N0\_crypto.svg?style=social)](https://twitter.com/N0\_crypto)
+![Version](https://img.shields.io/badge/version-1.1.0-blue.svg?style=for-the-badge)
+![Node](https://img.shields.io/badge/node-v20.10.0-blue.svg?style=for-the-badge)
+![NPM](https://img.shields.io/badge/npm-v10.2.3-blue?style=for-the-badge)
+![Nextjs](https://img.shields.io/badge/next-v13.5.4-blue?style=for-the-badge)
+![Tailwindcss](https://img.shields.io/badge/TailwindCSS-v3.0-blue?style=for-the-badge)
+![Wagmi](https://img.shields.io/badge/Wagmi-v1.4.3-blue?style=for-the-badge)
+[![License: MIT](https://img.shields.io/github/license/trashpirate/hold-earn.svg?style=for-the-badge)](https://github.com/trashpirate/hold-earn/blob/main/LICENSE)
+
+[![Website: nadinaoates.com](https://img.shields.io/badge/Portfolio-00e0a7?style=for-the-badge&logo=Website)](https://nadinaoates.com)
+[![LinkedIn: nadinaoates](https://img.shields.io/badge/LinkedIn-0a66c2?style=for-the-badge&logo=LinkedIn&logoColor=f5f5f5)](https://linkedin.com/in/nadinaoates)
+[![Twitter: N0_crypto](https://img.shields.io/badge/@N0_crypto-black?style=for-the-badge&logo=X)](https://twitter.com/N0_crypto)
+
 
 > **Hold ($EARN)** is a ERC20 token with a new implmentation to provide reflections to users. This repository is the website associated with the token and includes a reflection tracker including a tracker for the burn wallet. Users can also retrieve the reflection amounts of a given wallet. The Website was deployed on Vercel.
 
