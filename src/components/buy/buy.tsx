@@ -19,7 +19,7 @@ export default function Buy({}: Props) {
 
                         />
                         <h1 className='text-4xl font-bold mt-4'>BUY EARN</h1>
-                        <h2>You can buy $EARN with <a className='text-orange-500' href="https://flooz.xyz/trade/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E?network=eth">Flooz</a> or on <a className='text-orange-500' href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E">Uniswap</a>.</h2>
+                        <p className='mt-4 leading-7'>You can buy $EARN with <a className='text-orange-500' href="https://flooz.xyz/trade/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E?network=eth">Flooz</a> and <a className='text-orange-500' href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E">Uniswap</a> on Ethereum and with <a className='text-orange-500' href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE&fixed=in">Raydium</a> on Solana.</p>
                     </div>
                 </div>
                 <div className='flex justify-center sm:justify-end'>
