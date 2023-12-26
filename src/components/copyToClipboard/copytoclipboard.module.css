@@ -32,15 +32,17 @@
 }
 
 .notification {
+  line-height: 1rem;
   font-size: 14px;
-  margin: auto 10px;
+  margin: auto 0px;
   color: #FF6B10;
   opacity: 0.6;
 }
 
 .container h3 {
+  line-height: 2rem;
     text-overflow: ellipsis;  
-    margin-bottom: auto auto 12px auto;
+    margin: 0px auto 0xp auto;
     cursor: pointer;          
     word-break: break-all;
     overflow:hidden;
