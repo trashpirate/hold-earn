@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Buy', href: '#buy', current: false },
   { name: 'Products', href: '#products', current: false },
   { name: 'Whitepaper', href: '/EARN_WHITE_PAPER.pdf', current: false },
+  { name: 'Solana Bridge', href: 'https://app.debridge.finance/deport?inputChain=1&outputChain=7565164&inputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&outputCurrency=', current: false },
 ]
 
 export default function Navbar() {

@@ -39,10 +39,18 @@ export default function Introduction({}: Props) {
               tokens, EARN&apos;s journey begins with an initial burn of 500 million tokens, making it
               inherently deflationary.
             </p>
-            <CopyToClipboard
-            text="CA: 0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
+            
+            <div className='mt-4'>
+<CopyToClipboard
+            text="ETH-CA: 0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
             copyText="0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
             />
+            <CopyToClipboard
+            text="SOL-CA: 8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
+            copyText="8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
+            />
+            </div>
+            
             <div className='flex gap-5 flex-wrap'>
               <ChartButton></ChartButton>
             <NftButton url="https://app.buyholdearn.com/" name="Flames"></NftButton>
