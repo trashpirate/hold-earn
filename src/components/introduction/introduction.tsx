@@ -145,9 +145,13 @@ export default function Introduction({}: Props) {
                     FLAMLING COLLECTION LIVE NOW!
                     </Dialog.Title>
                     <div className='w-full flex justify-center h-fit'>
-                      <video autoPlay muted loop style={{ borderRadius: "25px", margin: "20px" }}>
-        <source src="/flameling_moving.mp4" />
-      </video>
+                      <Image
+            src="/flameling_moving.gif"
+            width={300}
+            height={300}
+            style={{borderRadius: "25px", margin: "20px"}}
+            alt="flameling"
+          />
             
           </div>
                   <div className="mt-2">
