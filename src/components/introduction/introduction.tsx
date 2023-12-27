@@ -102,15 +102,7 @@ export default function Introduction({}: Props) {
         </div>
       </div>
         <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none hover:ring-2 hover:ring-white/75"
-        >
-          Open dialog
-        </button>
-      </div>
+      
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -145,9 +137,13 @@ export default function Introduction({}: Props) {
                     FLAMLING COLLECTION LIVE NOW!
                     </Dialog.Title>
                     <div className='w-full flex justify-center h-fit'>
-                      <video autoPlay muted loop style={{ borderRadius: "25px", margin: "20px" }}>
-        <source src="/flameling_moving.mp4" />
-      </video>
+                      <Image
+            src="/flameling_moving.gif"
+            width={300}
+            height={300}
+            style={{borderRadius: "25px", margin: "20px"}}
+            alt="flameling"
+          />
             
           </div>
                   <div className="mt-2">
