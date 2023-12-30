@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import ReflectionChecker from '../reflectionChecker';
+import ReflectionChecker from '../reflectionChecker/reflectionChecker';
 
 
 import {useContractReads} from "wagmi";
