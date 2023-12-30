@@ -1,6 +1,7 @@
 var classNames = require('classnames');
 import {Disclosure} from '@headlessui/react';
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import BuyButton from './buyButton';
 
 const navigation = [
@@ -32,23 +33,25 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start align-middle">
+                <div className="flex flex-shrink-0 items-center my-auto">
+                  <Image
                     className="h-10 w-auto"
+                    width={122}
+                    height={122}
                     src="/earn_logo_round_transparent.png"
                     alt="EARN"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4 ">
+                  <div className="flex space-x-4 my-auto h-full">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-white/5 backdrop-blur text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
-                          'rounded-md px-3 py-2 text-md leading-4 align-middle font-medium'
+                          'rounded-md px-3 py-2 text-md leading-4 align-middle font-medium my-auto'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
