@@ -19,7 +19,7 @@ export default function Home() {
       <Tokenomics></Tokenomics>
       <Buy></Buy>
       <Products></Products>
-      <NFTLoans></NFTLoans>
+      {/* <NFTLoans></NFTLoans> */}
       <Exchanges></Exchanges>
       <Partners></Partners>
       <Footer></Footer>
