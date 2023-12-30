@@ -55,6 +55,7 @@ export default function PopUp({}: Props) {
                     <p className="text-sm text-gray-200">
                       The adorable Flamelings embody the warmth and energy of the fire they are born from. Funny, powerful, brave, patient, and dependable, they reflect the diverse qualities of the EARN community.
                     </p>
+                    <p>Price: 100,000 EARN</p>
                   </div>
 
                   <div className="mt-4 gap-4 flex">
@@ -63,7 +64,7 @@ export default function PopUp({}: Props) {
                       className="inline-flex justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-black hover:bg-orange-800 focus:outline-none hover:ring-2 hover:ring-orange-500 hover:ring-offset-2"
                       href="https://flame.buyholdearn.com/"
                     >
-                      MINT
+                      Launch App
                       </Link>
                       <button
                       type="button"

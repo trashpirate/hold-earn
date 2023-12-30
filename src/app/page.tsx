@@ -7,6 +7,8 @@ import Buy from "@/components/buy/buy";
 import Products from "@/components/products/products";
 import Partners from "@/components/partners/partners";
 import Footer from "@/components/footer/footer";
+import Exchanges from "@/components/exchanges/exchanges";
+import NFTLoans from "@/components/nftloans/nftloans";
 
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
       <Tokenomics></Tokenomics>
       <Buy></Buy>
       <Products></Products>
+      {/* <NFTLoans></NFTLoans> */}
+      <Exchanges></Exchanges>
       <Partners></Partners>
       <Footer></Footer>
     </main>

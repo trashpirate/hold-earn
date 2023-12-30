@@ -7,7 +7,6 @@ import { Alchemy, AssetTransfersCategory, Network } from "alchemy-sdk";
 
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
 
-
 const tokenContract = {
   address: "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E" as `0x${string}`,
   abi: abi,
