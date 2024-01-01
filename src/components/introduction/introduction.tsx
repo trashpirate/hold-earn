@@ -11,7 +11,7 @@ type Props = {};
 
 
 export default function Introduction({}: Props) {
-  
+
   return (
     <section id="introduction" className='px-7 my-16 scroll-m-36'>
       <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary mt-24 rounded-2xl relative justify-between">
@@ -42,29 +42,33 @@ export default function Introduction({}: Props) {
               tokens, EARN&apos;s journey begins with an initial burn of 500 million tokens, making it
               inherently deflationary.
             </p>
-            
+
             <div className='mt-4'>
-<CopyToClipboard
-            text="ETH-CA: 0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
-            copyText="0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
-            />
-            <CopyToClipboard
-            text="SOL-CA: 8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
-            copyText="8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
-            />
+              <CopyToClipboard
+                text="ETH-CA: 0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
+                copyText="0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
+              />
+              <CopyToClipboard
+                text="SOL-CA: 8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
+                copyText="8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
+              />
+              <CopyToClipboard
+                text="BNB-CA: 0x2ac895feba458b42884dcbcb47d57e44c3a303c8"
+                copyText="0x2ac895feba458b42884dcbcb47d57e44c3a303c8"
+              />
             </div>
-            
+
             <div className='flex gap-5 flex-wrap'>
               <ChartButton></ChartButton>
-            <NftButton url="https://app.buyholdearn.com/" name="Flames"></NftButton>
-            <NftButton url="https://flame.buyholdearn.com/" name="Flamelings"></NftButton>
+              <NftButton url="https://app.buyholdearn.com/" name="Flames"></NftButton>
+              <NftButton url="https://flame.buyholdearn.com/" name="Flamelings"></NftButton>
             </div>
-            
+
           </div>
-          
+
         </div>
         <div>
-          
+
         </div>
         {/* <div className='w-1/4 h-full bg-hero-pattern bg-auto sm:bg-auto bg-blend-multiply bg-[#000000aa] bg-origin-border bg-bottom'>
           Hello
@@ -82,18 +86,18 @@ export default function Introduction({}: Props) {
         <div className='col-start-2 row-start-1 w-full hidden lg:flex rounded-2xl justify-end'>
           <Link href="https://app.buyholdearn.com/" className='w-full flex justify-center'>
             <Image
-            src="/logo_hero.jpg"
-            width={321}
-                height={560}
-            style={{width: "40%", height: "auto", margin: ""}}
+              src="/logo_hero.jpg"
+              width={321}
+              height={560}
+              style={{width: "40%", height: "auto", margin: ""}}
               alt="flame"
-          />
+            />
           </Link>
-          
-  
+
+
         </div>
       </div>
-        <PopUp></PopUp>
+      <PopUp></PopUp>
     </section>
 
   );
