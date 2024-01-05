@@ -52,10 +52,10 @@ export default function Introduction({}: Props) {
                 text="SOL-CA: 8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
                 copyText="8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE"
               />
-              {/* <CopyToClipboard
+              <CopyToClipboard
                 text="BNB-CA: 0x2ac895feba458b42884dcbcb47d57e44c3a303c8"
                 copyText="0x2ac895feba458b42884dcbcb47d57e44c3a303c8"
-              /> */}
+              />
             </div>
 
             <div className='flex gap-5 flex-wrap'>
