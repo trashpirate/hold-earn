@@ -35,7 +35,7 @@ export default function Exchanges({}: Props) {
 
                         />
                     </Link>
-                    <Link className="mt-0 mb-auto mx-auto" href="https://pancakeswap.finance/swap?outputCurrency=0x2ac895feba458b42884dcbcb47d57e44c3a303c8">
+                    <Link className="mt-0 mb-auto mx-auto" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2aC895fEba458B42884DCbCB47D57e44c3a303c8">
                         <Image
                             className='h-auto w-64 justify-self-top rounded-lg '
                             src="/pancakeswap.png"
