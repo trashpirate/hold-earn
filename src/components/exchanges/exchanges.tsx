@@ -44,7 +44,7 @@ export default function Exchanges({}: Props) {
                             alt="pancakeswap logo"
 
                         />
-                        {/* <div className='text-center text-slate-400 mt-1 uppercase'>Listing on Jan 5th!</div> */}
+                        {/*  <div className='text-center text-slate-400 mt-1 uppercase'>Listing on Jan 5th!</div> */}
                     </Link>
 
                 </div>
