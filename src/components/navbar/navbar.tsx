@@ -3,6 +3,7 @@ import {Disclosure} from '@headlessui/react';
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import BuyButton from './buyButton';
+import Link from 'next/link';
 
 const navigation = [
   {name: 'Introduction', href: '#introduction', current: true},
@@ -11,7 +12,7 @@ const navigation = [
   {name: 'Products', href: '#products', current: false},
   {name: 'Exchanges', href: '#exchanges', current: false},
   {name: 'Whitepaper', href: '/EARN_WHITE_PAPER.pdf', current: false},
-  {name: 'Solana Bridge', href: 'https://app.debridge.finance/deport?inputChain=1&outputChain=7565164&inputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&outputCurrency=', current: false},
+  {name: 'Bridge', href: 'https://app.debridge.finance/deport?inputChain=1&outputChain=56&inputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&outputCurrency=', current: false},
 ];
 
 export default function Navbar() {
@@ -34,7 +35,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start align-middle">
-                <div className="flex flex-shrink-0 items-center my-auto">
+                <Link href="#introduction" className="flex flex-shrink-0 items-center my-auto">
                   <Image
                     className="h-10 w-auto"
                     width={122}
@@ -42,7 +43,7 @@ export default function Navbar() {
                     src="/earn_logo_round_transparent.png"
                     alt="EARN"
                   />
-                </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4 my-auto h-full">
                     {navigation.map((item) => (
