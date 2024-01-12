@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   applicationName: "BuyHoldEarn Website",
   twitter: {
     card: "summary_large_image",
-    site: "@site",
-    creator: "@creator",
+    site: "buyholdearn.com",
+    creator: "@buyholdearn",
     images: "https://buyholdearn.com/logo.jpg",
   },
   openGraph: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "BUY, HOLD, EARN, BURN",
     images: [
       {
-        url: "https://buyholdearn.com/logo.png",
+        url: "https://buyholdearn.com/logo.jpg",
       },
     ],
   },
