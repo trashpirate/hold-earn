@@ -25,7 +25,7 @@ export default function Navbar({contract, ticker}: Props) {
             <div className="relative flex h-20 items-center justify-between ">
               
               <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-start align-middle">
-                <Link href="https://app.buyholdearn.com/" className="flex flex-shrink-0 items-center my-auto">
+                <Link href="https://buyholdearn.com/" className="flex flex-shrink-0 items-center my-auto">
                   <Image
                     className="h-10 w-auto"
                     width={122}
