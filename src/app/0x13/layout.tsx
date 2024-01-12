@@ -3,8 +3,8 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "Flameling 0x13",
-  description: "0x13 Website",
-  applicationName: "0x13 Website",
+  description: "A Flameling Dividend Token",
+  applicationName: "Flameling 0x13",
   twitter: {
     card: "summary_large_image",
     site: "buyholdearn.com",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://buyholdearn.com",
     title: "Flameling 0x13",
-    description: "0x13 Website",
+    description: "A Flameling Dividend Token",
     siteName: "Flameling 0x13",
     images: [
       {
