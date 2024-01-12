@@ -8,20 +8,23 @@ import NftButton from '../../buttons/nftButton';
 
 type Props = {
   name: string;
-  nfturl: string;
+  contract: string;
+  nftUrl: string;
+  scanLink: string;
+  chartLink: string;
 };
 
 
-export default function Introduction({name, nfturl}: Props) {
+export default function Introduction({name, contract, nftUrl, scanLink, chartLink}: Props) {
 
   return (
-    <section id="introduction" className='px-7 my-8 scroll-m-36'>
+    <section className='px-7 my-8 scroll-m-36'>
       <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary my-24 rounded-2xl relative justify-between">
         <div className='my-8 lg:my-16 mx-4 sm:mx-8 xl:ml-16 col-start-1 row-start-1 z-10 sm:max-w-2xl'>
           <div className='my-4 flex gap-4 w-full pl-1'>
             <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="Telegram" />
             <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="X" />
-            <Link href="https://bscscan.com/address/0x96261e8Ed04FfDB190125FC48649eF106dD57886#code">
+            <Link href={scanLink}>
               <Image
                 src="/etherscan.png"
                 width={122}
@@ -43,13 +46,13 @@ export default function Introduction({name, nfturl}: Props) {
 
             <div className='mt-4'>
               <CopyToClipboard
-                text="CA: 0x96261e8Ed04FfDB190125FC48649eF106dD57886"
-                copyText="0x96261e8Ed04FfDB190125FC48649eF106dD57886"
+                text={`CA: ${contract}`}
+                copyText={contract}
               />
             </div>
 
             <div className='flex gap-5 flex-wrap'>
-              <ChartButton url="https://www.dextools.io/app/en/bnb/pair-explorer/0xd245f2b004fb095367376eba5cba4d7347a3cb74"></ChartButton>
+              <ChartButton url={chartLink}></ChartButton>
               <NftButton url="https://flame.buyholdearn.com/" name="Flamelings"></NftButton>
             </div>
 
@@ -73,7 +76,7 @@ export default function Introduction({name, nfturl}: Props) {
           /> */}
         </div>
         <div className='col-start-2 row-start-1 w-full hidden lg:flex rounded-2xl justify-end'>
-          <Link href={nfturl} className='w-full flex justify-center'>
+          <Link href={nftUrl} className='w-full flex justify-center'>
             <Image
             className='rounded-2xl m-4'
               src="/flameling_moving.gif"
