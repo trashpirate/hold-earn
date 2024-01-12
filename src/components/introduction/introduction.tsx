@@ -59,7 +59,7 @@ export default function Introduction({}: Props) {
             </div>
 
             <div className='flex gap-5 flex-wrap'>
-              <ChartButton></ChartButton>
+              <ChartButton url="https://www.dextools.io/app/en/ether/pair-explorer/0x32558f1214bd874c6cbc1ab545b28a18990ff7ee"></ChartButton>
               <NftButton url="https://app.buyholdearn.com/" name="Flames"></NftButton>
               <NftButton url="https://flame.buyholdearn.com/" name="Flamelings"></NftButton>
             </div>
