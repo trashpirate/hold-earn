@@ -38,7 +38,7 @@ export default function Introduction({name, contract, nftUrl, scanLink, chartLin
 
           <div className='w-full h-auto p-1'>
 
-            <h1 className='text-4xl font-bold'>{name}</h1>
+            <h1 className='text-4xl font-bold mb-2'>{name}</h1>
             <h2 className='text-2xl leading-10'>{`A Flameling Dividend Token`}</h2>
             <p className='leading-7 mt-4 text-md'>
               {`Flameling ($0x13) is a BEP-20 dividend token associated with the FLAMELING NFT #13. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional tax will be collected for initial launch costs (development, listing, and initial liquidity). The total supply is 1 Billion tokens while 1% of the supply is airdropped to the holder of FAMELING NFT #13.`}
