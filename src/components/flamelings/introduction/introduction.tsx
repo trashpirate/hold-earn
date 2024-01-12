@@ -61,9 +61,9 @@ export default function Introduction({name, contract, nftUrl, scanLink, chartLin
         </div>
        
         <div className='md:col-start-2 md:row-start-1 w-full flex rounded-2xl justify-end'>
-          <Link href={nftUrl} className='w-full flex justify-center'>
+          <Link href={nftUrl} className='w-full flex justify-center p-4 md:p-8'>
             <Image
-            className='rounded-2xl m-4 md:m-8'
+            className='rounded-2xl'
               src="/flameling_moving.gif"
               width={321}
               height={560}
