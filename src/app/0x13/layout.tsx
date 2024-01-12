@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Flameling 0x13",
+  title: "Flameling ($0x13)",
   description: "A Flameling Dividend Token",
-  applicationName: "Flameling 0x13",
+  applicationName: "Flameling ($0x13)",
   twitter: {
     card: "summary_large_image",
     site: "buyholdearn.com",
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://buyholdearn.com",
-    title: "Flameling 0x13",
+    title: "Flameling ($0x13)",
     description: "A Flameling Dividend Token",
-    siteName: "Flameling 0x13",
+    siteName: "Flameling ($0x13)",
     images: [
       {
         url: "https://buyholdearn.com/flamelings/0x13.png",
