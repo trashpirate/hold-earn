@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
 import Footer from "@/components/flamelings/footer/footer";
 import Navbar from "@/components/flamelings/navbar/navbar";
 import Introduction from "@/components/flamelings/introduction/introduction";
@@ -13,12 +15,14 @@ const SCAN_LINK="https://bscscan.com/address/0x96261e8Ed04FfDB190125FC48649eF106
 const CHART_LINK="https://www.dextools.io/app/en/bnb/pair-explorer/0xd245f2b004fb095367376eba5cba4d7347a3cb74"
 const DEX_LINK=""
 
+
+
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <section className={styles.main}>
       <Navbar contract={CONTRACT} ticker={TICKER}></Navbar>
       <Introduction name={NFT_NAME} contract={CONTRACT} nftUrl={NFT_NAME} scanLink={SCAN_LINK} chartLink={CHART_LINK}></Introduction>
       <Footer scan_link={SCAN_LINK}></Footer>
-    </main>
+    </section>
   );
 }
