@@ -12,17 +12,18 @@ type Props = {
   nftUrl: string;
   scanLink: string;
   chartLink: string;
+  tgLink: string;
 };
 
 
-export default function Introduction({ name, contract, nftUrl, scanLink, chartLink }: Props) {
+export default function Introduction({ name, contract, nftUrl, scanLink, chartLink, tgLink }: Props) {
 
   return (
     <section className='px-7 my-8 scroll-m-36'>
       <div className=" sm:bg-center h-auto w-full flex flex-col flex-col-reverse md:grid md:grid-rows-1 md:grid-cols-2 items-center max-w-7xl mx-auto border border-primary my-24 rounded-2xl relative justify-between">
         <div className='my-8 md:my-16 mx-4 sm:mx-8 xl:ml-16 col-start-1 row-start-1 z-10 sm:max-w-2xl'>
           <div className='my-4 flex gap-4 w-full pl-1'>
-            <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="Telegram" />
+            <SocialIcon network="telegram" url={tgLink} bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="Telegram" />
             <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="X" />
             <Link href={scanLink}>
               <Image
