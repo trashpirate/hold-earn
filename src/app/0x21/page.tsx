@@ -14,7 +14,7 @@ const CONTRACT = "Coming soon!";
 const TICKER = "0x21";
 const SCAN_LINK = "#"
 const CHART_LINK = "#"
-const TG_LINK = "https://t.me/buyholdearn"
+const TG_LINK = "https://t.me/FLAMELING0X21"
 const X_LINK = "https://twitter.com/buyholdearn"
 
 
