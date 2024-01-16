@@ -60,10 +60,11 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
+                    <TokenButton></TokenButton>
                   </div>
                 </div>
               </div>
-              <TokenButton></TokenButton>
+
               <BuyButton></BuyButton>
             </div>
           </div>
@@ -83,7 +84,9 @@ export default function Navbar() {
                 >
                   {item.name}
                 </Disclosure.Button>
+
               ))}
+              <TokenButton></TokenButton>
             </div>
           </Disclosure.Panel>
         </>
