@@ -10,7 +10,7 @@ import FlamelingIntroduction from "@/components/flamelings/introduction/introduc
 const NFT_ID = "21";
 const NFT_URL = "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/21";
 const IMAGE_URL = "/flamelings/0x21.gif"
-const CONTRACT = "0x96261e8Ed04FfDB190125FC48649eF106dD57886";
+const CONTRACT = "Coming soon!";
 const TICKER = "0x21";
 const SCAN_LINK = "#"
 const CHART_LINK = "#"
