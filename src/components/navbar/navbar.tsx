@@ -1,24 +1,25 @@
 var classNames = require('classnames');
-import {Disclosure} from '@headlessui/react';
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/solid';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import BuyButton from './buyButton';
 import Link from 'next/link';
+import TokenButton from './tokenButton';
 
 const navigation = [
-  {name: 'Introduction', href: '#introduction', current: true},
-  {name: 'Tokenomics', href: '#tokenomics', current: false},
-  {name: 'Buy', href: '#buy', current: false},
-  {name: 'Products', href: '#products', current: false},
-  {name: 'Exchanges', href: '#exchanges', current: false},
-  {name: 'Whitepaper', href: '/EARN_WHITE_PAPER.pdf', current: false},
-  {name: 'Bridge', href: 'https://app.debridge.finance/deport?inputChain=1&outputChain=56&inputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&outputCurrency=', current: false},
+  { name: 'Introduction', href: '#introduction', current: true },
+  { name: 'Tokenomics', href: '#tokenomics', current: false },
+  { name: 'Buy', href: '#buy', current: false },
+  { name: 'Products', href: '#products', current: false },
+  { name: 'Exchanges', href: '#exchanges', current: false },
+  { name: 'Whitepaper', href: '/EARN_WHITE_PAPER.pdf', current: false },
+  { name: 'Bridge', href: 'https://app.debridge.finance/deport?inputChain=1&outputChain=56&inputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&outputCurrency=', current: false },
 ];
 
 export default function Navbar() {
   return (
     <Disclosure as="nav" className="fixed top-0 bg-white/5 backdrop-blur w-full z-20">
-      {({open}) => (
+      {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-20 items-center justify-between ">
@@ -62,6 +63,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+              <TokenButton></TokenButton>
               <BuyButton></BuyButton>
             </div>
           </div>
