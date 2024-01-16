@@ -14,7 +14,7 @@ export default function Introduction({ }: Props) {
 
   return (
     <section id="introduction" className='px-7 my-16 scroll-m-36'>
-      <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary mt-24 rounded-2xl relative justify-between">
+      <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary mt-4 rounded-2xl relative justify-between">
         <div className='my-8 lg:my-16 mx-4 sm:mx-8 xl:ml-16 col-start-1 row-start-1 z-10 sm:max-w-2xl'>
           <div className='my-4 flex gap-4 w-full pl-1'>
             <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="Telegram" />
