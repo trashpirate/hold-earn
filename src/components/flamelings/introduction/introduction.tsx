@@ -8,6 +8,7 @@ import NftButton from '../../buttons/nftButton';
 
 type Props = {
   id: string;
+  holderPercentage: string;
   contract: string;
   nftUrl: string;
   imageUrl: string;
@@ -18,7 +19,7 @@ type Props = {
 };
 
 
-export default function FlamlingIntroduction({ id, contract, nftUrl, imageUrl, scanLink, chartLink, tgLink, xLink }: Props) {
+export default function FlamlingIntroduction({ id, holderPercentage, contract, nftUrl, imageUrl, scanLink, chartLink, tgLink, xLink }: Props) {
 
   return (
     <section className='px-7 my-8 scroll-m-36'>
@@ -44,7 +45,7 @@ export default function FlamlingIntroduction({ id, contract, nftUrl, imageUrl, s
             <h1 className='text-4xl font-bold mb-2'>{`Flameling Ox${id}`}</h1>
             <h2 className='text-2xl leading-10'>{`A Flameling Dividend Token`}</h2>
             <p className='leading-7 mt-4 text-md'>
-              {`Flameling Ox${id} is a BEP-20 dividend token associated with the FLAMELING NFT #${id}. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional tax is collected for initial launch costs (development, listing, initial liquidity, and operations). The total supply is 1 Billion tokens while 1% of the supply is airdropped to the holder of FLAMELING NFT #${id}.`}
+              {`Flameling Ox${id} is a BEP-20 dividend token associated with the FLAMELING NFT #${id}. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional tax is collected for initial launch costs (development, listing, initial liquidity, and operations). The total supply is 1 Billion tokens while ${holderPercentage}% of the supply is airdropped to the holder of FLAMELING NFT #${id}.`}
             </p>
 
             <div className='mt-4'>
