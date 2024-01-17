@@ -14,7 +14,7 @@ export default function TokenButton() {
                     <Menu.Button className="relative flex rounded-md text-md leading-5 hover:bg-white/10">
                         <div className="px-3 py-2 w-max flex items-center gap-1 rounded-md ">
                             <div className="font-bold hidden xxs:inline">Flameling Tokens</div>
-                            <PlusIcon className="h-2 xs:h-4 w-4 xs:w-4 text-orange-500" aria-hidden="true" />
+                            <PlusIcon className="h-4 xs:h-4 w-4 xs:w-4 text-orange-500" aria-hidden="true" />
                         </div>
                         <span className="sr-only"></span>
                     </Menu.Button>

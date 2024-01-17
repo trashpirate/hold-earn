@@ -16,14 +16,13 @@ const SCAN_LINK = "#"
 const CHART_LINK = "#"
 const TG_LINK = "https://t.me/FLAMELING0X21"
 const X_LINK = "https://twitter.com/buyholdearn"
-
-
+const HOLDER_PERCENTAGE = "3"
 
 export default function Home() {
   return (
     <section className={styles.main}>
       <Navbar contract={CONTRACT} ticker={TICKER}></Navbar>
-      <FlamelingIntroduction id={NFT_ID} contract={CONTRACT} nftUrl={NFT_URL} imageUrl={IMAGE_URL} scanLink={SCAN_LINK} chartLink={CHART_LINK} tgLink={TG_LINK} xLink={X_LINK}></FlamelingIntroduction>
+      <FlamelingIntroduction id={NFT_ID} holderPercentage={HOLDER_PERCENTAGE} contract={CONTRACT} nftUrl={NFT_URL} imageUrl={IMAGE_URL} scanLink={SCAN_LINK} chartLink={CHART_LINK} tgLink={TG_LINK} xLink={X_LINK}></FlamelingIntroduction>
       <Footer scanLink={SCAN_LINK} tgLink={TG_LINK} xLink={X_LINK}></Footer>
     </section>
   );
