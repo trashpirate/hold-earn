@@ -14,12 +14,12 @@ type Props = {
   imageUrl: string;
   scanLink: string;
   chartLink: string;
+  lockLink: string;
   tgLink: string;
   xLink: string;
 };
 
-
-export default function FlamlingIntroduction({ id, holderPercentage, contract, nftUrl, imageUrl, scanLink, chartLink, tgLink, xLink }: Props) {
+export default function FlamlingIntroduction({ id, holderPercentage, contract, nftUrl, imageUrl, scanLink, chartLink, lockLink, tgLink, xLink }: Props) {
 
   return (
     <section className='px-7 my-8 scroll-m-36'>
@@ -45,7 +45,7 @@ export default function FlamlingIntroduction({ id, holderPercentage, contract, n
             <h1 className='text-4xl font-bold mb-2'>{`Flameling Ox${id}`}</h1>
             <h2 className='text-2xl leading-10'>{`A Flameling Dividend Token`}</h2>
             <p className='leading-7 mt-4 text-md'>
-              {`Flameling Ox${id} is a BEP-20 dividend token associated with the FLAMELING NFT #${id}. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional 2% tax is collected for initial launch costs (development, listing, initial liquidity, and operations). The total supply is 1 Billion tokens while ${holderPercentage}% of the supply is airdropped to the holder of FLAMELING NFT #${id}.`}
+              Flameling Ox{id} is a BEP-20 dividend token associated with the <a className="text-primary hover:opacity-100 opacity-60 hover:underline underline-offset-2 font-medium" href={nftUrl}>FLAMELING NFT #{id}</a>. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional 2% tax is collected for initial launch costs (development, listing, initial liquidity, and operations). The total supply is 1 Billion tokens while {holderPercentage}% of the supply is airdropped to the holder of <a className="text-primary hover:opacity-100 opacity-60 hover:underline underline-offset-2 font-medium" href={nftUrl}>FLAMELING NFT #{id}</a>. After launch, ownership is renounced and liquidty locked for 3 months on <a className="text-primary hover:opacity-100 opacity-60 hover:underline underline-offset-2 font-medium" href={lockLink}>UNCX</a>.
             </p>
 
             <div className='mt-4'>
