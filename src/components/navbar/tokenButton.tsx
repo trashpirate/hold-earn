@@ -32,7 +32,7 @@ export default function TokenButton() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="https://buyholdearn.com/0x13"
+                                    href="/0x13"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x13
@@ -42,7 +42,7 @@ export default function TokenButton() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="https://buyholdearn.com/0x21"
+                                    href="/0x21"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x21
