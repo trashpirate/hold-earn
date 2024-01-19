@@ -45,7 +45,7 @@ export default function FlamlingIntroduction({ id, holderPercentage, contract, n
             <h1 className='text-4xl font-bold mb-2'>{`Flameling Ox${id}`}</h1>
             <h2 className='text-2xl leading-10'>{`A Flameling Dividend Token`}</h2>
             <p className='leading-7 mt-4 text-md'>
-              {`Flameling Ox${id} is a BEP-20 dividend token associated with the FLAMELING NFT #${id}. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional 2% tax is collected for initial launch costs (development, listing, initial liquidity, and operations). The total supply is 1 Billion tokens while ${holderPercentage}% of the supply is airdropped to the holder of FLAMELING NFT #${id}.`}
+              {`Flameling Ox${id} is a BEP-20 dividend token associated with the FLAMELING NFT #${id}. The dividends are collected by a 2% transaction tax and redistributed to holders in $EARN. An additional 2% tax is collected for initial launch costs (development, listing, initial liquidity, and operations). The total supply is 1 Billion tokens while ${holderPercentage}% of the supply is airdropped to the holder of FLAMELING NFT #${id}. After launch, ownership is renounced and liquidty locked for 3 months on UNCX.`}
             </p>
 
             <div className='mt-4'>
