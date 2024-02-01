@@ -69,8 +69,8 @@ export default function FlamlingIntroduction({id, holderPercentage, contract, nf
             <Image
               className='rounded-2xl'
               src={imageUrl}
-              width={321}
-              height={560}
+              width={1024}
+              height={1024}
               style={{width: "100%", height: "auto", margin: ""}}
               alt="flameling"
               priority
