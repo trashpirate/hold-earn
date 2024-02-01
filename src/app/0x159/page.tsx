@@ -17,7 +17,7 @@ const CHART_LINK = "";
 const LOCK_LINK = "";
 const TG_LINK = "https://t.me/FLAMELING0X159";
 const X_LINK = "https://twitter.com/Stinger68K";
-const HOLDER_PERCENTAGE = "1";
+const HOLDER_PERCENTAGE = "2";
 
 
 
