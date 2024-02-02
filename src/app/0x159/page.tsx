@@ -10,10 +10,10 @@ import FlamelingIntroduction from "@/components/flamelings/introduction/introduc
 const NFT_ID = "159";
 const NFT_URL = "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/159";
 const IMAGE_URL = "/flamelings/0x159.gif";
-const CONTRACT = "0x5D18083b1129d41A7f471B1088556e3657877deC";
+const CONTRACT = "0x7424e6d7288aff9a99c58560b64bab0ac2730027";
 const TICKER = "0X159";
-const SCAN_LINK = "https://bscscan.com/token/0x5D18083b1129d41A7f471B1088556e3657877deC#code";
-const CHART_LINK = "";
+const SCAN_LINK = "https://bscscan.com/token/0x7424e6d7288aff9a99c58560b64bab0ac2730027#code";
+const CHART_LINK = "https://www.dextools.io/app/en/bnb/pair-explorer/0x12983b8278a58b77fcb21ac4dc672aa333da3adc?t=1706891959813";
 const LOCK_LINK = "";
 const TG_LINK = "https://t.me/FLAMELING0X159";
 const X_LINK = "https://twitter.com/Stinger68K";
