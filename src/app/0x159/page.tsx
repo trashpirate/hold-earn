@@ -14,7 +14,7 @@ const CONTRACT = "0x7424e6d7288aff9a99c58560b64bab0ac2730027";
 const TICKER = "0X159";
 const SCAN_LINK = "https://bscscan.com/token/0x7424e6d7288aff9a99c58560b64bab0ac2730027#code";
 const CHART_LINK = "https://www.dextools.io/app/en/bnb/pair-explorer/0x12983b8278a58b77fcb21ac4dc672aa333da3adc?t=1706891959813";
-const LOCK_LINK = "";
+const LOCK_LINK = "https://app.uncx.network/amm/pancake-v2/pair/0x12983b8278a58b77fcb21ac4dc672aa333da3adc";
 const TG_LINK = "https://t.me/FLAMELING0X159";
 const X_LINK = "https://twitter.com/Stinger68K";
 const HOLDER_PERCENTAGE = "2";
