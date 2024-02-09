@@ -90,7 +90,7 @@ export default function Tokenomics({}: Props) {
                                 <h1 className='text-gray-300  leading-5'>Total Supply:</h1><h1 className='font-bold'>1,000,000,000</h1>
                             </div>
                             <div className="h-16 flex items-center gap-5 rounded-md border-l-2 border-primary bg-white/5 backdrop-blur px-5 w-full">
-                                <h1 className='text-gray-300'>Transaction Tax:</h1><h1 className='font-bold'>2%</h1>
+                                <h1 className='text-gray-300'>Transaction Fee:</h1><h1 className='font-bold'>2%</h1>
                             </div>
                             <div className="h-16 flex items-center gap-5 rounded-md border-l-2 border-primary bg-white/5 backdrop-blur px-5 w-full">
                                 <h1 className='text-gray-300'>Reflections:</h1><h1 className='font-bold'>2%</h1>
