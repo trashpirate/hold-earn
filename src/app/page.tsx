@@ -9,6 +9,7 @@ import Partners from "@/components/partners/partners";
 import Footer from "@/components/footer/footer";
 import Exchanges from "@/components/exchanges/exchanges";
 import NFTLoans from "@/components/nftloans/nftloans";
+import LiquidityChart from "@/components/liquidity/liquidity";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Introduction></Introduction>
       <Tokenomics></Tokenomics>
+      <LiquidityChart></LiquidityChart>
       <Buy></Buy>
       <Products></Products>
       {/* <NFTLoans></NFTLoans> */}

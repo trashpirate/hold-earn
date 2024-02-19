@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@tremor/react": "^3.14.0",
     "@types/nodemailer": "^6.4.14",
     "@types/react-easy-crop": "^2.0.0",
+    "@vercel/postgres": "^0.7.2",
     "alchemy-sdk": "^2.10.1",
     "axios": "^1.6.3",
     "dotenv": "^16.3.1",
