@@ -2,30 +2,30 @@ import type {Metadata} from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Flameling ($0x177)",
-  description: "A Flameling Dividend Token",
-  applicationName: "Flameling ($0x177)",
+  title: "Flameling Tokens",
+  description: "Flameling Dividend Tokens",
+  applicationName: "Flamelings",
   twitter: {
     card: "summary_large_image",
     site: "buyholdearn.com",
     creator: "@buyholdearn",
-    images: "https://buyholdearn.com/flamelings/0x177.png",
+    images: "https://buyholdearn.com/flamelings/flamelingsPreview.jpeg",
   },
   openGraph: {
     type: "website",
     url: "https://buyholdearn.com",
-    title: "Flameling ($0x177)",
-    description: "A Flameling Dividend Token",
-    siteName: "Flameling ($0x177)",
+    title: "Flameling Tokens",
+    description: "Flameling Dividend Tokens",
+    siteName: "Flameling Tokens",
     images: [
       {
-        url: "https://buyholdearn.com/flamelings/0x177.png",
+        url: "https://buyholdearn.com/flamelings/flamelingsPreview.jpeg",
       },
     ],
   },
 };
 
-export default function FlamelingLayout({
+export default function FlamelingTokenLayout({
   children,
 }: {
   children: React.ReactNode;
