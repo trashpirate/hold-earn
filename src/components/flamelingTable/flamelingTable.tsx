@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {FlamelingToken} from './flamelingTokens';
 import ChartButton from '../buttons/chartButton';
+import BuyButton from '../buttons/buyButton';
 
 interface FlamelingTableProps {
     tokens: FlamelingToken[];
@@ -12,7 +13,7 @@ export default function FlamelingTable({tokens}: FlamelingTableProps) {
 
     return (
         <section className='w-full p-4' >
-            <h1 className='text-center uppercase font-bold text-3xl mb-10'>Launched Flameling Dividend Tokens</h1>
+            <h1 className='text-center uppercase font-bold text-3xl mb-10'>Flameling Dividend Tokens</h1>
             <div className='flex justify-center items-center w-full p-4'>
                 <table className='flex flex-row flex-no-wrap sm:table-auto sm:block border-separate border-spacing-y-3 sm:overflow-x-scroll overflow-hidden xl:overflow-auto'>
 
@@ -24,8 +25,8 @@ export default function FlamelingTable({tokens}: FlamelingTableProps) {
                             <th className='px-4 border-b-2 border-opacity-20'>Ticker</th>
                             <th className='px-4 border-b-2 border-opacity-20'>Contract</th>
                             <th className='px-4 border-b-2 border-opacity-20'>Marketcap</th>
-                            <th className='px-4 border-b-2 border-opacity-20'>Price</th>
-                            <th className='px-4 border-b-2 border-opacity-20'>Chart</th>
+                            <th className='px-4 border-b-2 border-opacity-20'>Launch</th>
+                            <th className='px-4 border-b-2 border-opacity-20'></th>
                         </tr>
 
                     </thead>
@@ -47,8 +48,8 @@ export default function FlamelingTable({tokens}: FlamelingTableProps) {
                                 <td className='px-6 py-2  text-center '><div className='flex gap-5 '><div className='sm:hidden'>Ticker: </div><div>{token.ticker}</div></div></td>
                                 <td className='px-6 py-2  text-center '><div className='flex gap-5'><div className='sm:hidden'>CA: </div><Link className='hover:text-primary' href={token.scanLink}><p className=' text-ellipsis overflow-hidden text-center w-40 xxs:w-54 xs:w-80 px-4 sm:w-full'>{token.contract}</p></Link></div></td>
                                 <td className='px-6 py-2  text-center'><div className='flex gap-5'><div className='sm:hidden'>Marketcap: </div><div>MC</div></div></td>
-                                <td className='px-6 py-2  text-center'><div className='flex gap-5'><div className='sm:hidden'>Price: </div><div>MC</div></div></td>
-                                <td className='sm:px-6 pt-2 pb-8 sm:py-2  text-center flex-row sm:flex-col justify-center align-middle sm:rounded-r-lg '><ChartButton url={token.chartLink}></ChartButton></td>
+                                <td className='px-6 py-2  text-center'><div className='flex gap-5'><div className='sm:hidden'>Launch: </div><div>{token.launch}</div></div></td>
+                                <td className='px-6 pt-2 pb-8 sm:py-2  text-center flex-row sm:flex-col justify-center align-middle sm:rounded-r-lg '><div className='flex flex-row gap-2'><ChartButton url={token.chartLink}></ChartButton><BuyButton url={`https://pancakeswap.finance/swap?chain=bsc&outputCurrency=${ token.contract }`} ></BuyButton></div></td>
                             </tr>
                         ))}
                     </tbody>

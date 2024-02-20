@@ -12,6 +12,7 @@ export interface FlamelingToken {
     tgLink: string;
     xLink: string;
     holderPercentage: string;
+    launch: string;
 }
 
 export const flamelingTokens: FlamelingToken[] = [
@@ -30,6 +31,7 @@ export const flamelingTokens: FlamelingToken[] = [
         tgLink: "https://t.me/FLAMELING0X0",
         xLink: "https://twitter.com/0x0flameling",
         holderPercentage: "1",
+        launch: "13 Feb '24"
     },
 
     {
@@ -46,6 +48,7 @@ export const flamelingTokens: FlamelingToken[] = [
         tgLink: "https://t.me/FLAMELING0X0",
         xLink: "https://twitter.com/0x0flameling",
         holderPercentage: "1",
+        launch: "13 Jan '24"
     },
     {
         id: 21,
@@ -61,6 +64,7 @@ export const flamelingTokens: FlamelingToken[] = [
         tgLink: "https://t.me/FLAMELING0X21",
         xLink: "https://twitter.com/0X21Flameling",
         holderPercentage: "3",
+        launch: "19 Jan '24"
     },
     {
         id: 159,
@@ -76,6 +80,7 @@ export const flamelingTokens: FlamelingToken[] = [
         tgLink: "https://t.me/FLAMELING0X159",
         xLink: "https://twitter.com/Stinger68K",
         holderPercentage: "2",
+        launch: "02 Feb '24"
     },
     {
         id: 177,
@@ -90,7 +95,8 @@ export const flamelingTokens: FlamelingToken[] = [
         lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0x0804f5701f6b33e0d0d6acabbee2f129ff5b4d95",
         tgLink: "https://t.me/FLAMELING0X177",
         xLink: "https://twitter.com/flameling0x177",
-        holderPercentage: "3"
+        holderPercentage: "3",
+        launch: "22 Feb '24"
     }
 
 ];
