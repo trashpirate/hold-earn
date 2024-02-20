@@ -30,7 +30,8 @@ const config: Config = {
         maxH192: "30rem"
       },
       width: {
-        wide: "500px"
+        wide: "500px",
+        table: "calc(100vw-1rem)"
       }
     },
   },

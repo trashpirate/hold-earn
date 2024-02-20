@@ -17,8 +17,8 @@ export interface FlamelingToken {
 export const flamelingTokens: FlamelingToken[] = [
 
     {
-        id: 1,
-        name: "Flameling 0x0",
+        id: 0,
+        name: "FLAMELING 0x0",
         refLink: "/0x0",
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/0",
         imageUrl: "/flamelings/0x0.gif",
@@ -34,7 +34,7 @@ export const flamelingTokens: FlamelingToken[] = [
 
     {
         id: 13,
-        name: "Flameling 0x13",
+        name: "FLAMELING 0x13",
         refLink: "/0x13",
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/13",
         imageUrl: "/flameling_moving.gif",
@@ -49,7 +49,7 @@ export const flamelingTokens: FlamelingToken[] = [
     },
     {
         id: 21,
-        name: "Flameling 0x21",
+        name: "FLAMELING 0x21",
         refLink: "/0x21",
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/21",
         imageUrl: "/flamelings/0x21.gif",
@@ -64,7 +64,7 @@ export const flamelingTokens: FlamelingToken[] = [
     },
     {
         id: 159,
-        name: "Flameling 0x159",
+        name: "FLAMELING 0x159",
         refLink: "/0x159",
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/159",
         imageUrl: "/flamelings/0x159.gif",
@@ -79,7 +79,7 @@ export const flamelingTokens: FlamelingToken[] = [
     },
     {
         id: 177,
-        name: "Flameling 0x177",
+        name: "FLAMELING 0x177",
         refLink: "/0x177",
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/177",
         imageUrl: "/flamelings/0x177.gif",
