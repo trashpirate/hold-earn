@@ -22,7 +22,6 @@ export async function GET() {
   });
 
   const burned = Number(formatEther(data));
-  console.log(burned);
   const circulating_supply = 1000000000 - burned;
 
   return NextResponse.json(circulating_supply, { status: 200 });
