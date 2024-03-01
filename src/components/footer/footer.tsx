@@ -28,11 +28,9 @@ export default function Footer({ }: Props) {
             />
             <h1 className='font-bold text-lg text-left align-middle my-auto'>BUY, HOLD, EARN</h1>
           </div>
-          <div className='text-sm text-white text-opacity-30'>
-            Designed & Developed by <Link className='hover:text-primary' href="https://twitter.com/N0_crypto">@N0_crypto</Link>
-          </div>
+
         </div>
-        <div className='flex flex-col justify-between h-full xs:w-2/4 '>
+        <div className='flex flex-col justify-between h-full w-fit'>
           <div className="flex flex-col my-4 lg:flex-row gap-5">
             {navigation.map((item) => (
               <a
@@ -57,6 +55,9 @@ export default function Footer({ }: Props) {
                 alt="etherscan"
               />
             </Link>
+          </div>
+          <div className='text-sm text-white text-opacity-30 text-left sm:text-right'>
+            Designed & Developed by <Link className='hover:text-primary' href="https://twitter.com/N0_crypto">@N0_crypto</Link>
           </div>
         </div>
 
