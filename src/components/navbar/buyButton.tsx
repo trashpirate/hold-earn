@@ -49,7 +49,7 @@ export default function BuyButton() {
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <a
                   href="https://pancakeswap.finance/swap?chain=base&outputCurrency=0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
@@ -58,7 +58,7 @@ export default function BuyButton() {
                   Buy on PancakeSwap (BASE)
                 </a>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item>
               {({ active }) => (
                 <a
