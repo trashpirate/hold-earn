@@ -6,6 +6,40 @@ const nextConfig = {
     config.externals.push("pino-pretty", "lokijs", "encoding");
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/0x0',
+        destination: '/flamelings/0x0',
+        permanent: true,
+      },
+      {
+        source: '/0x13',
+        destination: '/flamelings/0x13',
+        permanent: true,
+      },
+      {
+        source: '/0x21',
+        destination: '/flamelings/0x21',
+        permanent: true,
+      },
+      {
+        source: '/0x156',
+        destination: '/flamelings/0x156',
+        permanent: true,
+      },
+      {
+        source: '/0x159',
+        destination: '/flamelings/0x159',
+        permanent: true,
+      },
+      {
+        source: '/0x177',
+        destination: '/flamelings/0x177',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
    return [
      {
