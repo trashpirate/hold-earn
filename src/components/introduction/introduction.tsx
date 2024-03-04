@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import {SocialIcon} from 'react-social-icons';
+import { SocialIcon } from 'react-social-icons';
 import Link from 'next/link';
 import ChartButton from '../buttons/chartButton';
 import CopyToClipboard from '../copyToClipboard';
@@ -10,21 +10,21 @@ import PopUp from './popup';
 type Props = {};
 
 
-export default function Introduction({}: Props) {
+export default function Introduction({ }: Props) {
 
   return (
     <section id="introduction" className='px-7 my-32 scroll-m-36'>
       <div className=" sm:bg-center h-auto w-full grid lg:grid-cols-2 items-center max-w-7xl mx-auto border border-primary mt-4 rounded-2xl relative justify-between">
         <div className='my-8 lg:my-16 mx-4 sm:mx-8 xl:ml-16 col-start-1 row-start-1 z-10 sm:max-w-2xl'>
           <div className='my-4 flex gap-4 w-full pl-1'>
-            <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="Telegram" />
-            <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{height: 25, width: 25}} label="X" />
+            <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="Telegram" />
+            <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="X" />
             <Link href="https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code">
               <Image
                 src="/etherscan.png"
                 width={122}
                 height={122}
-                style={{width: "25px", height: "auto", opacity: "0.8"}}
+                style={{ width: "25px", height: "auto", opacity: "0.8" }}
                 alt="etherscan"
               />
             </Link>
@@ -56,6 +56,10 @@ export default function Introduction({}: Props) {
                 text="BNB-CA: 0x2ac895feba458b42884dcbcb47d57e44c3a303c8"
                 copyText="0x2ac895feba458b42884dcbcb47d57e44c3a303c8"
               />
+              <CopyToClipboard
+                text="BASE-CA: 0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
+                copyText="0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
+              />
             </div>
 
             <div className='flex gap-5 flex-wrap'>
@@ -78,7 +82,7 @@ export default function Introduction({}: Props) {
             src="/smoke.gif"
             width={412}
             height={732}
-            style={{width: "400px", height: "100%", bottom: "0", position: "absolute", inset: "0"}}
+            style={{ width: "400px", height: "100%", bottom: "0", position: "absolute", inset: "0" }}
             alt="flame"
             className='object-cover'
           />
@@ -89,7 +93,7 @@ export default function Introduction({}: Props) {
               src="/logo_hero.jpg"
               width={321}
               height={560}
-              style={{width: "40%", height: "auto", margin: ""}}
+              style={{ width: "40%", height: "auto", margin: "" }}
               alt="flame"
             />
           </Link>
