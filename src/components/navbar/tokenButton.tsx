@@ -1,7 +1,7 @@
-import {Menu, Transition} from '@headlessui/react';
-import {PlusIcon} from '@heroicons/react/24/solid';
+import { Menu, Transition } from '@headlessui/react';
+import { PlusIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 var classNames = require('classnames');
 
 export default function TokenButton() {
@@ -30,9 +30,9 @@ export default function TokenButton() {
                 >
                     <Menu.Items className="absolute right-0 mt-2 w-fit origin-top-right rounded-md bg-orange-700/95 backdrop-blur-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
-                            {({active}) => (
+                            {({ active }) => (
                                 <a
-                                    href="/0x0"
+                                    href="/flamelings/0x0"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x0
@@ -40,9 +40,9 @@ export default function TokenButton() {
                             )}
                         </Menu.Item>
                         <Menu.Item>
-                            {({active}) => (
+                            {({ active }) => (
                                 <a
-                                    href="/0x13"
+                                    href="/flamelings/0x13"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x13
@@ -50,9 +50,9 @@ export default function TokenButton() {
                             )}
                         </Menu.Item>
                         <Menu.Item>
-                            {({active}) => (
+                            {({ active }) => (
                                 <a
-                                    href="/0x21"
+                                    href="/flamelings/0x21"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x21
@@ -60,19 +60,30 @@ export default function TokenButton() {
                             )}
                         </Menu.Item>
                         <Menu.Item>
-                            {({active}) => (
+                            {({ active }) => (
                                 <a
-                                    href="/0x159"
+                                    href="/flamelings/0x156"
+                                    className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
+                                >
+                                    0x156
+                                </a>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <a
+                                    href="/flamelings/0x159"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x159
                                 </a>
                             )}
                         </Menu.Item>
+
                         <Menu.Item>
-                            {({active}) => (
+                            {({ active }) => (
                                 <a
-                                    href="/0x177"
+                                    href="/flamelings/0x177"
                                     className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                                 >
                                     0x177
