@@ -38,6 +38,11 @@ const nextConfig = {
         destination: '/flamelings/0x177',
         permanent: true,
       },
+      {
+        source: '/0x222',
+        destination: '/flamelings/0x222',
+        permanent: true,
+      },
     ]
   },
   async headers() {
