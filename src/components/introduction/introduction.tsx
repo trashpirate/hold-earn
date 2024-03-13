@@ -19,6 +19,7 @@ export default function Introduction({ }: Props) {
           <div className='my-4 flex gap-4 w-full pl-1'>
             <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="Telegram" />
             <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="X" />
+            <SocialIcon network="linkedin" url="https://www.linkedin.com/company/earnecosystem" bgColor="#FF6B10aa" style={{ height: 25, width: 25 }} label="LinkedIn" />
             <Link href="https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code">
               <Image
                 src="/etherscan.png"

@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import styles from "./page.module.css";
-import type {Metadata} from "next";
-
 import Footer from "@/components/flamelings/footer/footer";
 import Navbar from "@/components/flamelings/navbar/navbar";
 import FlamelingIntroduction from "@/components/flamelings/introduction/introduction";
