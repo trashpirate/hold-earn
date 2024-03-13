@@ -16,7 +16,7 @@ const SCAN_LINK = "https://bscscan.com/token/0x517316ab1bf91296c821a2ab98e3d0924
 const CHART_LINK = "https://www.dextools.io/app/en/bnb/pair-explorer/0xbee0d2e7172aa4fcfbe2fa6a30bf1af973df0204";
 const LOCK_LINK = "https://app.uncx.network/amm/pancake-v2/pair/0xbee0d2e7172aa4fcfbe2fa6a30bf1af973df0204";
 const TG_LINK = "https://t.me/FLAMELING0X237";
-const X_LINK = "https://twitter.com/Rugs_2_Riches";
+const X_LINK = "https://twitter.com/Riches0x237";
 const HOLDER_PERCENTAGE = "3";
 
 export default function Home() {
