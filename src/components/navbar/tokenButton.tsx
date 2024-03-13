@@ -90,6 +90,26 @@ export default function TokenButton() {
                                 </a>
                             )}
                         </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <a
+                                    href="/flamelings/0x222"
+                                    className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
+                                >
+                                    0x222
+                                </a>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <a
+                                    href="/flamelings/0x237"
+                                    className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
+                                >
+                                    0x237
+                                </a>
+                            )}
+                        </Menu.Item>
 
 
                     </Menu.Items>
