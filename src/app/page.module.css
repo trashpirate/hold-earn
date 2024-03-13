@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: left;
   min-height: 100vh;
-  padding-top: 25px;
+  /* padding-top: 25px; */
   background-color: var(--bg-color);
 }
 

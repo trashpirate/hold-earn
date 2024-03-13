@@ -1,6 +1,4 @@
-var classNames = require('classnames');
-import {Disclosure} from '@headlessui/react';
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/solid';
+import { Disclosure } from '@headlessui/react';
 import Image from 'next/image';
 import BuyButton from './buyButton';
 import Link from 'next/link';
@@ -11,10 +9,10 @@ type Props = {
 };
 
 
-export default function Navbar({contract, ticker}: Props) {
+export default function Navbar({ contract, ticker }: Props) {
   return (
     <Disclosure as="nav" className="fixed top-0 bg-white/5 backdrop-blur w-full z-20">
-      {({open}) => (
+      {({ open }) => (
         <>
           <div className="mx-4 md:mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-20 items-center justify-between ">
