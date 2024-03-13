@@ -46,6 +46,7 @@ export default function Footer({ }: Props) {
           <div className='my-4 flex gap-4 w-full justify-start xs:justify-end h-12'>
             <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="Telegram" />
             <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="X" />
+            <SocialIcon network="linkedin" url="https://www.linkedin.com/company/earnecosystem" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="LinkedIn" />
             <Link href="https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code">
               <Image
                 src="/etherscan.png"
