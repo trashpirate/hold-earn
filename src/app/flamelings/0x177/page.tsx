@@ -16,12 +16,21 @@ const LOCK_LINK = "https://app.uncx.network/amm/pancake-v2/pair/0x0804f5701f6b33
 const TG_LINK = "https://t.me/FLAMELING0X177";
 const X_LINK = "https://twitter.com/flameling0x177";
 const HOLDER_PERCENTAGE = "3";
+const CUSTOM_BUTTONS = [{
+  id: "1",
+  name: "Website",
+  link: "https://seizethemomentum.com"
+}, {
+  id: "2",
+  name: "Store",
+  link: "https://0X177.etsy.com"
+}]
 
 export default function Home() {
   return (
     <section className={styles.main}>
       <Navbar contract={CONTRACT} ticker={TICKER}></Navbar>
-      <FlamelingIntroduction id={NFT_ID} holderPercentage={HOLDER_PERCENTAGE} contract={CONTRACT} ticker={TICKER} nftUrl={NFT_URL} imageUrl={IMAGE_URL} scanLink={SCAN_LINK} chartLink={CHART_LINK} lockLink={LOCK_LINK} tgLink={TG_LINK} xLink={X_LINK}></FlamelingIntroduction>
+      <FlamelingIntroduction id={NFT_ID} holderPercentage={HOLDER_PERCENTAGE} contract={CONTRACT} ticker={TICKER} nftUrl={NFT_URL} imageUrl={IMAGE_URL} scanLink={SCAN_LINK} chartLink={CHART_LINK} lockLink={LOCK_LINK} tgLink={TG_LINK} xLink={X_LINK} customButtons={CUSTOM_BUTTONS}></FlamelingIntroduction>
       <Footer scanLink={SCAN_LINK} tgLink={TG_LINK} xLink={X_LINK}></Footer>
     </section>
   );

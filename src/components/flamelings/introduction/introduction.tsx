@@ -4,7 +4,14 @@ import { SocialIcon } from 'react-social-icons';
 import Link from 'next/link';
 import ChartButton from '../../buttons/chartButton';
 import CopyToClipboard from '../../copyToClipboard';
-import NftButton from '../../buttons/nftButton';
+import CustomButton from '@/components/buttons/customButton';
+
+type CustomButtonData = {
+  id: string;
+  name: string;
+  link: string;
+}
+
 
 type Props = {
   id: string;
@@ -18,9 +25,10 @@ type Props = {
   lockLink: string;
   tgLink: string;
   xLink: string;
+  customButtons?: CustomButtonData[];
 };
 
-export default function FlamlingIntroduction({ id, holderPercentage, contract, ticker, nftUrl, imageUrl, scanLink, chartLink, lockLink, tgLink, xLink }: Props) {
+export default function FlamlingIntroduction({ id, holderPercentage, contract, ticker, nftUrl, imageUrl, scanLink, chartLink, lockLink, tgLink, xLink, customButtons }: Props) {
 
   return (
     <section className='px-7 my-20 scroll-m-36'>
@@ -58,7 +66,11 @@ export default function FlamlingIntroduction({ id, holderPercentage, contract, t
 
             <div className='flex gap-5 flex-wrap'>
               <ChartButton url={chartLink}></ChartButton>
-              <NftButton url="https://flame.buyholdearn.com/" name="Flamelings"></NftButton>
+              <CustomButton url="https://flame.buyholdearn.com/" name="Flamelings" ></CustomButton>
+              {customButtons !== undefined ?
+                customButtons.map((cbutton) => {
+                  return <CustomButton key={cbutton.id} url={cbutton.link} name={cbutton.name} ></CustomButton>
+                }) : <div></div>}
             </div>
 
           </div>
