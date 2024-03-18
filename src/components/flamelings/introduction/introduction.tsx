@@ -64,7 +64,7 @@ export default function FlamlingIntroduction({ id, holderPercentage, contract, t
               />
             </div>
 
-            <div className='flex gap-5 flex-wrap'>
+            <div className='flex gap-5 flex-wrap pt-4'>
               <ChartButton url={chartLink}></ChartButton>
               <CustomButton url="https://flame.buyholdearn.com/" name="Flamelings" ></CustomButton>
               {customButtons !== undefined ?
