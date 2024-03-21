@@ -7,11 +7,6 @@ import { Alchemy, AssetTransfersCategory, Network } from "alchemy-sdk";
 
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
 
-const tokenContract = {
-  address: "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E" as `0x${string}`,
-  abi: abi,
-};
-
 const config = {
   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
   network: process.env.NEXT_PUBLIC_TESTNET == "true" ? Network.ETH_GOERLI : Network.ETH_MAINNET,
@@ -96,9 +91,8 @@ export default function ReflectionChecker() {
         />
       </form>
 
-      <div className="h-8">{`${
-        reflections != null ? "Reflections: " + reflections?.toLocaleString() + " EARN" : ""
-      }`}</div>
+      <div className="h-8">{`${reflections != null ? "Reflections: " + reflections?.toLocaleString() + " EARN" : ""
+        }`}</div>
     </div>
   );
 }

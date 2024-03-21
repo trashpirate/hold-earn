@@ -3,13 +3,14 @@ import Image from 'next/image';
 import BuyButton from './buyButton';
 import Link from 'next/link';
 
+import { FlamelingToken } from "@/assets/flamelingTokens";
+
 type Props = {
-  contract: string;
-  ticker: string;
-};
+  metadata: FlamelingToken;
+}
 
 
-export default function Navbar({ contract, ticker }: Props) {
+export default function Navbar({ metadata }: Props) {
   return (
     <Disclosure as="nav" className="fixed top-0 bg-white/5 backdrop-blur w-full z-20">
       {({ open }) => (
@@ -24,12 +25,12 @@ export default function Navbar({ contract, ticker }: Props) {
                     width={122}
                     height={122}
                     src="/earn_logo_round_transparent.png"
-                    alt={ticker}
+                    alt={metadata.ticker}
                   />
                 </Link>
 
               </div>
-              <BuyButton contract={contract} ticker={ticker}></BuyButton>
+              <BuyButton metadata={metadata}></BuyButton>
             </div>
           </div>
 
