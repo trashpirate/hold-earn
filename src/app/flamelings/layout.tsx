@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         site: "buyholdearn.com",
         creator: "@buyholdearn",
-        images: "https://buyholdearn.com/flamelings/flamelingsPreview.jpeg",
+        images: "https://buyholdearn.com/flamelings/preview.jpeg",
     },
     openGraph: {
         type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: "Flameling Tokens",
         images: [
             {
-                url: "https://buyholdearn.com/flamelings/flamelingsPreview.jpeg",
+                url: "https://buyholdearn.com/flamelings/preview.jpeg",
             },
         ],
     },
