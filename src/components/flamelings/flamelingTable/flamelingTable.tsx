@@ -127,7 +127,7 @@ export default function FlamelingTable() {
 
                     <tbody className='flex-1 font-light pt-8'>
                         {Array.from(tokenData.values()).map((token, index) => (
-                            <tr className='flex flex-col flex-no border-primary border sm:h-20 wrap sm:table-row sm:bg-white/5 sm:backdrop-blur hover:bg-white/10 mb-8 sm:mb-0 rounded-lg sm:rounded-none' key={token.id} >
+                            <tr className='flex flex-col flex-no border-primary border sm:h-20 wrap sm:table-row sm:bg-white/5 sm:backdrop-blur mb-8 sm:mb-0 rounded-lg sm:rounded-none' key={token.id} >
                                 <td className='text-primary flex-row font-bold text-center sm:border-l-2 sm:border-primary sm:rounded-l-lg w-full sm:w-6'>
                                     <div className='flex gap-2 leading-4 m-auto sm:py-2 pt-8 pb-6 justify-center sm:w-full'>
                                         <div className='text-center w-fit sm:hidden '>RANK </div>
@@ -187,7 +187,7 @@ export default function FlamelingTable() {
                                         <div className='mx-auto w-fit h-fit my-auto'>
                                             <BuyButton url={`https://pancakeswap.finance/swap?chain=bsc&outputCurrency=${token.contract}`} ></BuyButton>
                                         </div>
-                                        <div className='w-6 text-center align-middle text-primary text-opacity-50 py-2'>
+                                        <div className='w-6 text-center align-middle text-primary text-opacity-50 py-2 hover:text-opacity-100'>
                                             <Link className='m-auto' href={token.refLink}><ArrowTopRightOnSquareIcon></ArrowTopRightOnSquareIcon></Link>
                                         </div>
                                     </div>

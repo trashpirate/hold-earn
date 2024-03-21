@@ -28,7 +28,17 @@ export default function Navbar({ metadata }: Props) {
                     alt={metadata.ticker}
                   />
                 </Link>
+                <div className="flex my-auto h-full mx-8">
+                  <a
+                    href="/flamelings"
+                    className='text-gray-300 hover:bg-white/5 hover:text-white rounded-md px-3 py-2 text-md leading-4 align-middle font-medium my-auto'
 
+                  >
+                    Flameling Tokens
+                  </a>
+
+                  {/* <TokenButton></TokenButton> */}
+                </div>
               </div>
               <BuyButton metadata={metadata}></BuyButton>
             </div>
