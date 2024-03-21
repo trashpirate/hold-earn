@@ -132,7 +132,7 @@ export default function FlamelingTable() {
                                 <td className='text-primary flex-row font-bold text-center sm:border-l-2 sm:border-primary sm:rounded-l-lg w-full sm:w-6'>
                                     <div className='flex gap-2 leading-4 m-auto sm:py-2 pt-8 pb-6 justify-center sm:w-full'>
                                         <div className='text-center w-fit sm:hidden '>RANK </div>
-                                        <div className='text-center w-fit sm:w-full'>{index + 1}
+                                        <div className={`text-center w-fit sm:w-full ${token.mc == 0 ? "animate-ping" : ""}`}>{token.mc == 0 ? "---" : index + 1}
                                         </div>
                                     </div>
                                 </td>
