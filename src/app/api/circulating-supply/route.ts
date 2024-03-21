@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { formatEther } from "viem";
-import { publicClient } from "../../../utils/client";
 
 import { abi } from "../../../assets/tokenABI";
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";

@@ -3,13 +3,13 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image';
 
-type Props = {
-  scanLink: string;
-  tgLink: string;
-  xLink: string;
-};
+import { FlamelingToken } from "@/assets/flamelingTokens";
 
-export default function Footer({ scanLink, tgLink, xLink }: Props) {
+type Props = {
+  metadata: FlamelingToken;
+}
+
+export default function Footer({ metadata }: Props) {
   return (
     <footer className=' bg-white/5 backdrop-blur w-full z-10 h-fit flex justify-center'>
       <div className='flex justify-between p-8 max-w-7xl w-full flex-col xs:flex-row'>
@@ -27,9 +27,9 @@ export default function Footer({ scanLink, tgLink, xLink }: Props) {
         <div className='flex flex-col justify-between h-full xs:w-2/4 '>
 
           <div className='my-4 flex gap-4 w-full justify-start xs:justify-end h-12 align-middle'>
-            <SocialIcon className='my-auto' network="telegram" url={tgLink} bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="Telegram" />
-            <SocialIcon className='my-auto' network="x" url={xLink} bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="X" />
-            <Link href={scanLink} className='my-auto'>
+            <SocialIcon className='my-auto' network="telegram" url={metadata.tgLink} bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="Telegram" />
+            <SocialIcon className='my-auto' network="x" url={metadata.xLink} bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="X" />
+            <Link href={metadata.scanLink} className='my-auto'>
               <Image
                 src="/etherscan.png"
                 width={122}
