@@ -2,6 +2,7 @@ import Link from 'next/link';
 import ChartButton from '../../buttons/chartButton';
 import BuyButton from '../../buttons/buyButton';
 import Copy2Clipboard from '@/components/copy2Clipboard/copy2Clipboard';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 import { formatEther } from "viem";
 import { flamelingABI } from '@/assets/flamelingTokenABI';
@@ -25,7 +26,7 @@ interface FlamelingTableProps {
     tokens: FlamelingToken[];
 }
 
-const tableHeaderStyleDefault = 'flex flex-col flex-nowrap sm:table-row mb-8 sm:mb-0 hidden';
+const tableHeaderStyleDefault = '';
 
 
 async function getPrice(tokenContract: string, pair: string) {
@@ -67,19 +68,21 @@ export default function FlamelingTable() {
     function updateTokenData() {
 
         fetch("/api/cmc-price").then(response => response.json()).then(bnbPrice => {
-            const newTokenData = flamelingTokens;
+            console.log(bnbPrice)
+            const newTokenData = new Map(tokenData);
             newTokenData.forEach((value, key) => {
+
                 const fToken = newTokenData?.get(key);
                 getPrice(value.contract, value.pair).then(price => {
                     if (price != undefined) {
                         fToken!.mc = price * bnbPrice * 1000000000
-                        return fToken;
+                        newTokenData.set(key, fToken!);
                     }
                 });
 
-                return fToken;
             })
-            setTokenData(newTokenData);
+            let dataSorted = new Map([...newTokenData.entries()].sort(([, a], [, b]) => b.mc - a.mc))
+            setTokenData(dataSorted);
         });
 
 
@@ -99,30 +102,40 @@ export default function FlamelingTable() {
         return () => clearInterval(interval);
     }, []);
 
-    const tokens = Array.from(tokenData.values());
+
     return (
         <section className='w-full p-4' >
-            <h1 className='text-center uppercase font-bold text-3xl mb-10'>Flameling Dividend Tokens</h1>
+            <h1 className='text-center uppercase font-bold text-3xl mb-10 mx-4'>Flameling Dividend Tokens</h1>
             <div className='flex justify-center items-center w-full p-4'>
-                <table className='flex flex-row flex-no-wrap sm:table-auto sm:block border-separate border-spacing-y-3 sm:overflow-x-scroll overflow-hidden xl:overflow-auto'>
+                <table className='flex flex-row flex-no-wrap sm:table-auto sm:block border-separate border-spacing-y-4 sm:overflow-x-scroll overflow-hidden xl:overflow-auto'>
 
                     <thead >
 
-                        <tr className={tableHeaderStyleDefault} >
-                            <th className='px-4 border-b-2 border-opacity-20'>NFT</th>
-                            {/* <th className='px-4 border-b-2 border-opacity-20'>Name</th> */}
-                            <th className='px-4 border-b-2 border-opacity-20'>Ticker</th>
-                            <th className='px-4 border-b-2 border-opacity-20'>Contract</th>
-                            <th className='px-4 border-b-2 border-opacity-20'>Marketcap</th>
-                            <th className='px-4 border-b-2 border-opacity-20'>Launch</th>
-                            <th className='px-4 border-b-2 border-opacity-20'></th>
+                        <tr className="flex-nowrap sm:table-row hidden " >
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'>Rank</th>
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'>NFT</th>
+                            {/* <th className='px-4 border-b-2 border-opacity-50 pb-2 mb-10 border-primary'>Name</th> */}
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'>Ticker</th>
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'>Contract</th>
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'>Marketcap</th>
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'>Launch</th>
+                            <th className='px-4 border-b-2 border-opacity-50 pb-2 border-primary'></th>
                         </tr>
 
+
                     </thead>
-                    <tbody className='flex-1 sm:flex-none '>
-                        {tokens.map(token => (
-                            <tr className='flex flex-col flex-no border-primary border  wrap sm:table-row sm:bg-white/5 sm:backdrop-blur hover:bg-white/10 mb-8 sm:mb-0 rounded-lg sm:rounded-none' key={token.id} >
-                                <td className='px-4 py-4 sm:py-2  sm:border-l-2 sm:border-primary sm:rounded-l-lg'>
+
+                    <tbody className='flex-1 font-light pt-8'>
+                        {Array.from(tokenData.values()).map((token, index) => (
+                            <tr className='flex flex-col flex-no border-primary border sm:h-20 wrap sm:table-row sm:bg-white/5 sm:backdrop-blur hover:bg-white/10 mb-8 sm:mb-0 rounded-lg sm:rounded-none' key={token.id} >
+                                <td className='text-primary flex-row font-bold text-center sm:border-l-2 sm:border-primary sm:rounded-l-lg w-full sm:w-6'>
+                                    <div className='flex gap-2 leading-4 m-auto sm:py-2 pt-8 pb-6 justify-center sm:w-full'>
+                                        <div className='text-center w-fit sm:hidden '>RANK </div>
+                                        <div className='text-center w-fit sm:w-full'>{index + 1}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td className='px-3 py-2  text-center '>
                                     <Link href={token.refLink}>
                                         <img className='w-full sm:w-[60px] h-auto rounded-lg sm:rounded-full m-auto'
                                             src={token.imageUrl}
@@ -131,10 +144,10 @@ export default function FlamelingTable() {
                                             alt="etherscan"
                                         />
                                     </Link></td>
-                                <td className='px-6 py-2 text-center sm:hidden font-bold text-lg'><Link className='hover:text-primary' href={token.refLink}>{token.name}</Link></td>
+                                <td className='px-6 py-4 text-center sm:hidden font-bold text-lg'><Link className='hover:text-primary' href={token.refLink}>{token.name}</Link></td>
 
                                 <td className='px-6 py-2  text-center '>
-                                    <div className='flex gap-5 '>
+                                    <div className='flex gap-5  leading-4'>
                                         <div className='sm:hidden'>Ticker: </div>
                                         <div>{token.ticker}
                                         </div>
@@ -142,36 +155,40 @@ export default function FlamelingTable() {
                                 </td>
 
                                 <td className='px-6 py-2  text-center '>
-                                    <div className='flex gap-5 w-48 align-middle h-full'>
+                                    <div className='flex gap-5 w-48 align-middle h-full leading-4'>
+                                        <div className='sm:hidden m-auto text-primary'>CA: </div>
                                         <Copy2Clipboard
-                                            text="0xbC68AE53d383f399Cc18268034C5E656fCb839f3"
-                                            copyText="0xbC68AE53d383f399Cc18268034C5E656fCb839f3"
+                                            text={token.contract}
+                                            copyText={token.contract}
                                             textColor='text-primary'
-                                            textSize='text-sm'
+                                            textSize='text-md'
                                             iconSize='text-[10px]'
                                         />
 
                                     </div>
                                 </td>
                                 <td className='px-6 py-2  text-center'>
-                                    <div className='flex gap-5'>
+                                    <div className='flex gap-5 justify-start sm:justify-center leading-4'>
                                         <div className='sm:hidden'>Marketcap: </div>
-                                        <div className='text-center w-full'>{token.mc == 0 ? "---" : `${(token.mc / 1000).toFixed(0)}${String.fromCharCode(8239)}K`}</div>
+                                        <div className='text-center w-fit'>{token.mc == 0 ? "---" : `${(token.mc / 1000).toFixed(0)}${String.fromCharCode(8239)}K`}</div>
                                     </div>
                                 </td>
                                 <td className='px-6 py-2  text-center'>
-                                    <div className='flex gap-5'>
+                                    <div className='flex gap-5  leading-4'>
                                         <div className='sm:hidden'>Launch: </div>
                                         <div>{token.launch}</div>
                                     </div>
                                 </td>
-                                <td className='px-6 pt-2 pb-8 sm:py-2 text-center flex-row sm:flex-col justify-center align-middle sm:rounded-r-lg '>
-                                    <div className='flex flex-row gap-2'>
-                                        <div className='w-fit h-fit m-auto'>
+                                <td className='px-6  py-8 sm:py-2 text-center flex-col justify-center align-middle sm:rounded-r-lg'>
+                                    <div className='flex flex-row gap-4 my-auto'>
+                                        <div className='mx-auto w-fit h-fit my-auto'>
                                             <ChartButton url={token.chartLink}></ChartButton>
                                         </div>
-                                        <div className='w-fit h-fit m-auto'>
+                                        <div className='mx-auto w-fit h-fit my-auto'>
                                             <BuyButton url={`https://pancakeswap.finance/swap?chain=bsc&outputCurrency=${token.contract}`} ></BuyButton>
+                                        </div>
+                                        <div className='w-6 text-center align-middle text-primary text-opacity-50 py-2'>
+                                            <Link className='m-auto' href={token.refLink}><ArrowTopRightOnSquareIcon></ArrowTopRightOnSquareIcon></Link>
                                         </div>
                                     </div>
                                 </td>
