@@ -3,6 +3,7 @@ import ChartButton from '../../buttons/chartButton';
 import BuyButton from '../../buttons/buyButton';
 import Copy2Clipboard from '@/components/copy2Clipboard/copy2Clipboard';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
 import { formatEther } from "viem";
 import { flamelingABI } from '@/assets/flamelingTokenABI';
@@ -137,11 +138,12 @@ export default function FlamelingTable() {
                                 </td>
                                 <td className='px-3 py-2  text-center '>
                                     <Link href={token.refLink}>
-                                        <img className='w-full sm:w-[60px] h-auto rounded-lg sm:rounded-full m-auto'
+                                        <Image className='w-full sm:w-[60px] h-auto rounded-lg sm:rounded-full m-auto'
                                             src={token.imageUrl}
                                             width={122}
                                             height={122}
                                             alt="etherscan"
+                                            priority
                                         />
                                     </Link></td>
                                 <td className='px-6 py-4 text-center sm:hidden font-bold text-lg'><Link className='hover:text-primary' href={token.refLink}>{token.name}</Link></td>
