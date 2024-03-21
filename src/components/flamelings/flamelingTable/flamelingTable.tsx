@@ -172,7 +172,7 @@ export default function FlamelingTable() {
                                 <td className='px-6 py-2  text-center'>
                                     <div className='flex gap-5 justify-start sm:justify-center leading-4'>
                                         <div className='sm:hidden'>Marketcap: </div>
-                                        <div className='text-center w-fit'>{token.mc == 0 ? "---" : `${(token.mc / 1000).toFixed(0)}${String.fromCharCode(8239)}K`}</div>
+                                        <div className={`text-center w-fit ${token.mc == 0 ? "animate-ping" : ""}`}>{token.mc == 0 ? "---" : `${(token.mc / 1000).toFixed(0)}${String.fromCharCode(8239)}K`}</div>
                                     </div>
                                 </td>
                                 <td className='px-6 py-2  text-center'>
