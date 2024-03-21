@@ -151,7 +151,7 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
         tgLink: "https://t.me/FLAMELING0X177",
         xLink: "https://twitter.com/flameling0x177",
         holderPercentage: "3",
-            launch: "22 Feb '24",
+        launch: "22 Feb '24",
             customButtons: [{
                 id: "1",
                 name: "Website",
@@ -172,13 +172,13 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
         pair: "0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
         mc: 0,
         ticker: "0X222",
-        scanLink: "https://bscscan.com/token/0xb0bcb4ede80978f12aa467f7344b9bdbcd2497f3#code",
-        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0x0804f5701f6b33e0d0d6acabbee2f129ff5b4d95",
-        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0x0804f5701f6b33e0d0d6acabbee2f129ff5b4d95",
+        scanLink: "https://bscscan.com/token/0x85063a8c52c81f8c270d10bc2056d5e703157de4#code",
+        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
+        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
         tgLink: "https://t.me/FLAMELING0X222",
-        xLink: "https://twitter.com/flameling0x222",
-        holderPercentage: "3",
-        launch: "22 Feb '24"
+        xLink: "https://twitter.com/Rugs0x222",
+        holderPercentage: "4",
+        launch: "14 Mar '24"
     }],
         ["0x237", {
         id: 237,
@@ -187,7 +187,7 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/237",
         imageUrl: "/flamelings/0x237.gif",
         contract: "0x517316ab1bf91296c821a2ab98e3d0924a625237",
-        pair: "0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
+        pair: "0xbee0d2e7172aa4fcfbe2fa6a30bf1af973df0204",
         mc: 0,
         ticker: "0X237",
         scanLink: "https://bscscan.com/token/0x517316ab1bf91296c821a2ab98e3d0924a625237#code",
@@ -196,6 +196,6 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
         tgLink: "https://t.me/FLAMELING0X237",
         xLink: "https://twitter.com/Riches0x237",
         holderPercentage: "3",
-        launch: "22 Feb '24"
+        launch: "14 Mar '24"
     }]
 ])

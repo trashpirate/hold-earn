@@ -5,18 +5,41 @@ import Image from 'next/image';
 import BuyButton from './buyButton';
 import Link from 'next/link';
 import TokenButton from './tokenButton';
+import useHash from './useHash';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
-  { name: 'Introduction', href: '/#introduction', current: true },
-  { name: 'Tokenomics', href: '/#tokenomics', current: false },
-  { name: 'Buy', href: '/#buy', current: false },
-  { name: 'Products', href: '/#products', current: false },
-  { name: 'Exchanges', href: '/#exchanges', current: false },
-  { name: 'Whitepaper', href: '/EARN_WHITE_PAPER.pdf', current: false },
+  { name: 'Introduction', href: '../#introduction', current: true },
+  { name: 'Tokenomics', href: '../#tokenomics', current: false },
+  { name: 'Buy', href: '../#buy', current: false },
+  { name: 'Products', href: '../#products', current: false },
+  { name: 'Exchanges', href: '../#exchanges', current: false },
+  { name: 'Whitepaper', href: '../EARN_WHITE_PAPER.pdf', current: false },
   { name: 'Bridge', href: 'https://app.debridge.finance/deport?inputChain=1&outputChain=56&inputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E&outputCurrency=', current: false },
+  { name: 'Flameling Tokens', href: "../flamelings" }
 ];
 
 export default function Navbar() {
+
+  const pathname = usePathname();
+  const hash = useHash();
+
+  function isActive(ref: string) {
+    const path = ref.replace('..', '');
+
+
+
+    if (hash && hash.length > 0) {
+      const currentPath = `${pathname}#${hash}`;
+      return currentPath === path;
+    }
+    else {
+      return pathname === path;
+    }
+
+  }
+
+
   return (
     <Disclosure as="nav" className="fixed top-0 bg-white/5 backdrop-blur w-full z-20">
       {({ open }) => (
@@ -52,7 +75,7 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-white/5 backdrop-blur text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
+                          isActive(item.href) ? 'bg-white/5 backdrop-blur text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
                           'rounded-md px-3 py-2 text-md leading-4 align-middle font-medium my-auto'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -60,7 +83,7 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
-                    <TokenButton></TokenButton>
+                    {/* <TokenButton></TokenButton> */}
                   </div>
                 </div>
               </div>
@@ -86,7 +109,7 @@ export default function Navbar() {
                 </Disclosure.Button>
 
               ))}
-              <TokenButton></TokenButton>
+              {/* <TokenButton></TokenButton> */}
             </div>
           </Disclosure.Panel>
         </>
