@@ -69,7 +69,7 @@ export default function FlamelingTable() {
     function updateTokenData() {
 
         fetch("/api/cmc-price").then(response => response.json()).then(bnbPrice => {
-            console.log(bnbPrice)
+            // console.log(bnbPrice)
             const newTokenData = new Map(tokenData);
             newTokenData.forEach((value, key) => {
 

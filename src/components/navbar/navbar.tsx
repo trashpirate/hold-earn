@@ -31,13 +31,9 @@ export default function Navbar() {
 
     if (hash && hash.length > 0) {
       const currentPath = `${pathname}#${hash}`;
-      console.log(currentPath)
-      console.log(path)
       return currentPath === path;
     }
     else {
-      console.log(pathname)
-      console.log(path)
       return pathname === path;
     }
 
