@@ -182,7 +182,7 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
     }],
         ["0x237", {
         id: 237,
-        name: "FLAMELING 0x2237",
+        name: "FLAMELING 0x237",
         refLink: "/0x237",
         nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/237",
         imageUrl: "/flamelings/0x237.gif",
