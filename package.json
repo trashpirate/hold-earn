@@ -25,6 +25,7 @@
     "react-iframe": "^1.8.5",
     "react-number-format": "^5.3.1",
     "react-social-icons": "^6.7.0",
+    "typescript-map": "^0.1.0",
     "viem": "^1.16.2",
     "wagmi": "^1.4.3"
   },
