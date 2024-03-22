@@ -5,60 +5,9 @@ import Copy2Clipboard from '@/components/copy2Clipboard/copy2Clipboard';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
-import { formatEther } from "viem";
-import { flamelingABI } from '@/assets/flamelingTokenABI';
-import { wbnbABI } from '@/assets/wbnbABI';
-
-import { createPublicClient, http } from 'viem'
-import { bsc } from 'viem/chains'
 import { useEffect, useState } from 'react';
 
 import { flamelingTokens, FlamelingToken } from "@/assets/flamelingTokens";
-
-
-const WBNB = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
-
-const client = createPublicClient({
-    chain: bsc,
-    transport: http(`https://rpc.ankr.com/bsc/${process.env.NEXT_PUBLIC_ANKR_API_KEY}`)
-})
-
-interface FlamelingTableProps {
-    tokens: FlamelingToken[];
-}
-
-const tableHeaderStyleDefault = '';
-
-
-async function getPrice(tokenContract: string, pair: string) {
-
-    let price: number | undefined = undefined;
-    const data = await client.multicall({
-        contracts: [
-            {
-                address: WBNB as `0x${string}`,
-                abi: wbnbABI,
-                functionName: "balanceOf",
-                args: [pair as `0x${string}`],
-            },
-            {
-                address: tokenContract as `0x${string}`,
-                abi: flamelingABI,
-                functionName: "balanceOf",
-                args: [pair as `0x${string}`],
-            }
-        ]
-
-    });
-
-    if (data[0].status == "success" && data[1].status == "success") {
-        const nativeBalance = Number(formatEther(data[0].result));
-        const tokenBalance = Number(formatEther(data[1].result));
-        if (tokenBalance > 0) { price = nativeBalance / tokenBalance; }
-    }
-    return price;
-
-}
 
 export default function FlamelingTable() {
 
@@ -67,24 +16,20 @@ export default function FlamelingTable() {
 
 
     function updateTokenData() {
-
-        fetch("/api/cmc-price").then(response => response.json()).then(bnbPrice => {
-            // console.log(bnbPrice)
-            const newTokenData = new Map(tokenData);
-            newTokenData.forEach((value, key) => {
-
-                const fToken = newTokenData?.get(key);
-                getPrice(value.contract, value.pair).then(price => {
-                    if (price != undefined) {
-                        fToken!.mc = price * bnbPrice * 1000000000
+        fetch("/api/flameling-token-price").then(response => response.json()).then(data =>
+            Object.entries(JSON.parse(data))).then(dataArray => {
+                const newTokenData = new Map(tokenData);
+                dataArray.forEach(([key, mc]) => {
+                    const fToken = newTokenData?.get(key);
+                    if (mc != undefined) {
+                        fToken!.mc = Number(mc)
                         newTokenData.set(key, fToken!);
                     }
+                    // console.log(`Key: ${key}, Value: ${mc}`);
                 });
-
-            })
-            let dataSorted = new Map([...newTokenData.entries()].sort(([, a], [, b]) => b.mc - a.mc))
-            setTokenData(dataSorted);
-        });
+                let dataSorted = new Map([...newTokenData.entries()].sort(([, a], [, b]) => b.mc - a.mc))
+                setTokenData(dataSorted);
+            });
 
 
     }
