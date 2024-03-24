@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Partnership({ }: Props) {
     return (
-        <section className='flex justify-center'>
+        <section className='flex justify-center mx-2'>
             <div className='max-w-5xl w-full flex justify-between flex-col md:flex-row mx-4 rounded-2xl border-4 border-primary p-4'>
 
                 {/* <div className='sm:flex flex-col justify-start sm:flex-row my-4 mx-4 md:mx-auto align-middle sm:justify-center  p-4 md:max-h-64'> */}
