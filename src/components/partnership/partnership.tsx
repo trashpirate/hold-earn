@@ -14,7 +14,7 @@ export default function Partnership({ }: Props) {
                 <Link className="w-fit flex" href="https://forms.gle/N1RFtESwo8ZeXZ2KA">
                     <Image
                         className='rounded-xl md:my-8 lg:my-auto'
-                        src="/earn_partnership.png"
+                        src="/earn_partnership.jpg"
                         width={700}
                         height={700}
                         alt="earn partnership program"
