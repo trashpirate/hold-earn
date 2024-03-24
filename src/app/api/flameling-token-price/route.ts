@@ -4,9 +4,11 @@ import { flamelingTokens, FlamelingToken } from "@/assets/flamelingTokens";
 import { createPublicClient, formatEther, http } from "viem";
 import { bsc } from "viem/chains";
 import { wbnbABI } from "@/assets/wbnbABI";
+import { usdtABI } from "@/assets/usdtbnbABI";
 import { flamelingABI } from "@/assets/flamelingTokenABI";
 
 const WBNB = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
+const USDT = "0x55d398326f99059fF775485246999027B3197955";
 
 const client = createPublicClient({
     chain: bsc,
@@ -40,6 +42,39 @@ async function getBNBPrice(coinId: number) {
   }
 }
 
+async function getBNBUSDTPrice() {
+
+    let price: number | undefined = undefined;
+    const data = await client.multicall({
+        contracts: [
+            {
+                address: WBNB as `0x${string}`,
+                abi: wbnbABI,
+                functionName: "balanceOf",
+                args: ["0x36696169c63e42cd08ce11f5deebbcebae652050" as `0x${string}`],
+            },
+            {
+                address: USDT as `0x${string}`,
+                abi: usdtABI,
+                functionName: "balanceOf",
+                args: ["0x36696169c63e42cd08ce11f5deebbcebae652050" as `0x${string}`],
+            }
+        ]
+
+    });
+
+    if (data[0].status == "success" && data[1].status == "success") {
+        const bnbBalance = Number(formatEther(data[0].result));
+      const usdtBalance = Number(formatEther(data[1].result));
+      // console.log(bnbBalance)
+      // console.log(usdtBalance)
+        price = usdtBalance / bnbBalance;
+    }
+    return price;
+
+}
+
+
 async function getFlamelingTokenPrice(tokenContract: string, pair: string) {
 
     let price: number | undefined = undefined;
@@ -72,8 +107,10 @@ async function getFlamelingTokenPrice(tokenContract: string, pair: string) {
 
 
 export async function GET() {
+  // const bnbdexPrice = await getBNBUSDTPrice();
+  // console.log(bnbdexPrice)
   const bnbPrice = await getBNBPrice(BNB_ID);
-
+  // console.log(bnbPrice)
   const newTokenData = new Map(flamelingTokens);
   let jsonObject: { [key: string]: number } = {};
   for (let [key, value] of newTokenData) {
