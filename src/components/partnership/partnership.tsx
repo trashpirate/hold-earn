@@ -21,7 +21,7 @@ export default function Partnership({ }: Props) {
                             priority
                         />
                     </Link>
-                    <div className='mt-8 md:my-4 max-w-3xl mx-8'>
+                    <div className='my-8 md:my-4 max-w-3xl mx-8'>
                         <h1 className='uppercase md:text-xl text-primary font-bold leading-6'>Are you an awesome crypto project and looking for partnerhsips?</h1>
                         <div className='flex flex-col justify-between'>
                             <div className='leading-6 my-4 text-sm md:text-lg text-white/50'>
@@ -29,7 +29,7 @@ export default function Partnership({ }: Props) {
                             </div>
                             <div className='flex flex-row h-fit w-full justify-start align-middle'>
                                 <div className='leading-4 text-lg md:text-xl text-primary my-auto'>
-                                    Become our new partner TODAY!
+                                    Become our partner TODAY!
                                 </div>
                                 <Link className="flex flex-col justify-center align-middle" href="https://forms.gle/N1RFtESwo8ZeXZ2KA">
                                     <ArrowTopRightOnSquareIcon className='h-6 mx-2 my-auto  text-primary duration-500 hover:scale-125 transform '></ArrowTopRightOnSquareIcon>
