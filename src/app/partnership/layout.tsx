@@ -4,7 +4,7 @@ import React from "react";
 export const metadata: Metadata = {
     title: "EARN Partnership Program",
     description: "Elevate your crypto project and enroll in the EARN Partnership Program!",
-    applicationName: "Flamelings",
+    applicationName: "EARN Partnership Program",
     twitter: {
         card: "summary_large_image",
         site: "buyholdearn.com/partnership",
