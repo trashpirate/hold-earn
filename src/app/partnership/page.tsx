@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col mx-auto rounded-2xl border-2 border-primary p-6 sm:p-8 w-full max-w-3xl mt-4 mb-16">
-                    <Link className="w-full max-w-3xl rounded-2xl mb-4 sm:mb-8" href="https://forms.gle/N1RFtESwo8ZeXZ2KA">
+                    <Link className="w-full max-w-3xl rounded-2xl mb-4 sm:mb-8" href="https://forms.gle/tdLTVhWPGAES97nL9">
                         <Image
                             className='rounded-xl w-full  hidden sm:block'
                             src="/earn_partnership_banner.jpg"
