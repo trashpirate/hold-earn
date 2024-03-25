@@ -20,8 +20,16 @@ export default function Home() {
                 <div className="flex flex-col mx-auto rounded-2xl border-2 border-primary p-6 sm:p-8 w-full max-w-3xl mt-4 mb-16">
                     <Link className="w-full max-w-3xl rounded-2xl mb-4 sm:mb-8" href="https://forms.gle/N1RFtESwo8ZeXZ2KA">
                         <Image
-                            className='rounded-xl w-full'
+                            className='rounded-xl w-full  hidden sm:block'
                             src="/earn_partnership_banner.jpg"
+                            width={700}
+                            height={700}
+                            alt="earn partnership program"
+                            priority
+                        />
+                        <Image
+                            className='rounded-xl w-full sm:hidden'
+                            src="/earn_partnership.jpg"
                             width={700}
                             height={700}
                             alt="earn partnership program"
