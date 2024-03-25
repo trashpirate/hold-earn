@@ -11,7 +11,7 @@ export default function Partnership({ }: Props) {
             <div className='max-w-5xl w-full flex justify-between flex-col md:flex-row mx-4 rounded-2xl border-4 border-primary p-4'>
 
                 {/* <div className='sm:flex flex-col justify-start sm:flex-row my-4 mx-4 md:mx-auto align-middle sm:justify-center  p-4 md:max-h-64'> */}
-                <Link className="w-fit flex" href="https://forms.gle/N1RFtESwo8ZeXZ2KA">
+                <Link className="w-fit flex" href="/partnership">
                     <Image
                         className='rounded-xl md:my-8 lg:my-auto'
                         src="/earn_partnership.jpg"
@@ -31,7 +31,7 @@ export default function Partnership({ }: Props) {
                             <div className='leading-6 text-lg md:text-xl text-primary my-auto'>
                                 Become our partner TODAY!
                             </div>
-                            <Link className="flex flex-col justify-center align-middle" href="https://forms.gle/N1RFtESwo8ZeXZ2KA">
+                            <Link className="flex flex-col justify-center align-middle" href="/partnership">
                                 <ArrowTopRightOnSquareIcon className='h-5 mx-4 my-auto  text-primary duration-500 hover:scale-125 transform '></ArrowTopRightOnSquareIcon>
                             </Link>
 
