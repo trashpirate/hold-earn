@@ -52,14 +52,13 @@ export default function Home() {
                         <li className="leading-7">You must give us at least 0.5 ETH worth of tokens or 0.5% of the supply to be airdropped to our <a href="https://app.buyholdearn.com/" className="text-primary/70 hover:text-primary">Flame NFT</a> holders.</li>
                         <li className="leading-7">Projects must post weekly updates about the $EARN partnership on X tagging <a href="https://twitter.com/buyholdearn" className="text-primary/70 hover:text-primary">@buyholdearn</a> to help spread the word.</li>
                     </ol>
+                    <div className="leading-6 mb-2 mt-6 text-sm md:text-lg text-primary/50 italic">* Referrals receive 10% of the allocated airdrop.</div>
                     <div className='flex flex-row w-full justify-center align-middle mt-8 mb-4'>
                         <Link href="https://forms.gle/tdLTVhWPGAES97nL9" className='leading-6 text-md md:text-lg text-black bg-primary px-4 py-2 cursor-pointer rounded-xl font-bold my-auto duration-500 hover:scale-110 transform'>
                             Become our partner TODAY!
                         </Link>
-                        {/* <Link className="flex flex-col justify-center align-middle " >
-                        <ArrowTopRightOnSquareIcon className='h-5 mx-4 my-auto  text-primary '></ArrowTopRightOnSquareIcon>
-                    </Link> */}
                     </div>
+
                 </div>
             </div>
 
