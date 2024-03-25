@@ -10,7 +10,7 @@ import Footer from "@/components/footer/footer";
 export default function Home() {
 
     return (
-        <section className="flex flex-col justify-start h-screen pt-28 sm:pt-36 mx-4">
+        <section className="flex flex-col justify-start h-screen pt-28 sm:pt-36 ">
             <Navbar></Navbar>
             <div className="flex mx-auto w-full justify-center">
 
