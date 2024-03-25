@@ -49,7 +49,7 @@ export default function Home() {
                             Project must have over 200 holders.
                         </li>
                         <li className="leading-7">The contract renounced for safety with LP burned or locked.</li>
-                        <li className="leading-7">You must give us at least 0.5% or more of the supply to be airdropped to our <a href="https://app.buyholdearn.com/" className="text-primary/70 hover:text-primary">Flame NFT</a> holders.</li>
+                        <li className="leading-7">You must give us at least 0.5 ETH worth of tokens or 0.5% of the supply to be airdropped to our <a href="https://app.buyholdearn.com/" className="text-primary/70 hover:text-primary">Flame NFT</a> holders.</li>
                         <li className="leading-7">Projects must post weekly updates about the $EARN partnership on X tagging <a href="https://twitter.com/buyholdearn" className="text-primary/70 hover:text-primary">@buyholdearn</a> to help spread the word.</li>
                     </ol>
                     <div className='flex flex-row w-full justify-center align-middle mt-8 mb-4'>
