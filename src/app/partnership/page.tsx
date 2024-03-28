@@ -50,7 +50,7 @@ export default function Home() {
                         </li>
                         <li className="leading-7">LP must be burned or locked.</li>
                         <li className="leading-7">Projects must post weekly updates about the $EARN partnership on X tagging <a href="https://twitter.com/buyholdearn" className="text-primary/70 hover:text-primary">@buyholdearn</a> to help spread the word.</li>
-                        <li className="leading-7">Optional: Provide any amount of your token to be airdropped to our <a href="https://app.buyholdearn.com/" className="text-primary/70 hover:text-primary">Flame NFT</a> holders.</li>
+                        <li className="leading-7">Optional: Provide any amount of your token (we suggest at least 0.5 ETH worth or 0.5% of the supply) to be airdropped to our <a href="https://app.buyholdearn.com/" className="text-primary/70 hover:text-primary">Flame NFT</a> holders.</li>
                     </ol>
                     <div className="leading-6 mb-2 mt-6 text-sm md:text-lg text-primary/50 italic">* Referrals receive 10% of the allocated airdrop.</div>
                     <div className='flex flex-row w-full justify-center align-middle mt-8 mb-4'>
