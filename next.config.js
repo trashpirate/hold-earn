@@ -29,6 +29,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/0x67',
+        destination: '/flamelings/0x67',
+        permanent: true,
+      },
+      {
         source: '/0x156',
         destination: '/flamelings/0x156',
         permanent: true,
