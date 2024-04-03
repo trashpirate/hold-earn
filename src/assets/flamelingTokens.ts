@@ -99,6 +99,24 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
         holderPercentage: "1",
         launch: "21 Mar '24"
     }],
+        ["0x67", {
+        id: 67,
+        name: "FLAMELING 0x67",
+        refLink: "/0x67",
+        nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/67",
+        imageUrl: "/flamelings/0x67.gif",
+        contract: "0xc6c3a2e767f2f5deb6543bb085f0bf198d6d3d50",
+        pair: "0x9fc222a4f0a55c161437c09edb9e406200ab3986",
+        mc: 0,
+        ticker: "0X67",
+        scanLink: "https://bscscan.com/token/0xc6c3a2e767f2f5deb6543bb085f0bf198d6d3d50#code",
+        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0x9fc222a4f0a55c161437c09edb9e406200ab3986",
+        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0x9fc222a4f0a55c161437c09edb9e406200ab3986",
+        tgLink: "https://t.me/OX67FLAMELING",
+        xLink: "https://twitter.com/FlamelingOx67",
+        holderPercentage: "1",
+        launch: "05 Apr '24"
+    }],
         ["0x156", {
         id: 156,
         name: "FLAMELING 156",
