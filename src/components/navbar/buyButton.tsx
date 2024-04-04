@@ -75,7 +75,7 @@ export default function BuyButton() {
                   href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE&fixed=in"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy BNB-EARN (PancakeSwap)
+                  Buy SOL-EARN (Raydium)
                 </a>
               )}
             </Menu.Item>
