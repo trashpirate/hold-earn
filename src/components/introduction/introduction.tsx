@@ -67,6 +67,10 @@ export default function Introduction({ }: Props) {
                 text="BASE-CA: 0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
                 copyText="0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
               />
+              <CopyToClipboard
+                text="AVAX-CA: 0x806cc7a21bd85e960857ac1e097802fabad6f594"
+                copyText="0x806cc7a21bd85e960857ac1e097802fabad6f594"
+              />
             </div>
 
             <div className='flex gap-5 flex-wrap pt-4'>
