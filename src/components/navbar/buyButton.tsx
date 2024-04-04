@@ -28,14 +28,24 @@ export default function BuyButton() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-2 w-64 origin-top-right rounded-md bg-orange-500/50 backdrop-blur-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 mt-2 w-64 origin-top-right rounded-md bg-orange-500/70 backdrop-blur-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy on Uniswap (ETH)
+                  Buy ETH-EARN (Uniswap)
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="https://app.uniswap.org/swap?chain=avalanche&outputCurrency=0x806cc7a21bd85e960857ac1e097802fabad6f594"
+                  className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
+                >
+                  Buy AVAX-EARN (Uniswap)
                 </a>
               )}
             </Menu.Item>
@@ -45,27 +55,27 @@ export default function BuyButton() {
                   href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2aC895fEba458B42884DCbCB47D57e44c3a303c8"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy on PancakeSwap (BNB)
+                  Buy BNB-EARN (PancakeSwap)
                 </a>
               )}
             </Menu.Item>
-            {/* <Menu.Item>
+            <Menu.Item>
               {({ active }) => (
                 <a
                   href="https://pancakeswap.finance/swap?chain=base&outputCurrency=0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy on PancakeSwap (BASE)
+                  Buy BASE-EARN (PancakeSwap)
                 </a>
               )}
-            </Menu.Item> */}
+            </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=8CuPzHKuZQUyYbear8fi3u6iuTY652WVZT2cHZ2yeNbE&fixed=in"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy on Raydium (SOL)
+                  Buy SOL-EARN (Raydium)
                 </a>
               )}
             </Menu.Item>

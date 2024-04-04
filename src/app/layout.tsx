@@ -12,7 +12,7 @@ const globalFont = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BUY, HOLD, EARN, BURN",
+  title: "BUY, HOLD, EARN",
   description: "BuyHoldEarn Website",
   applicationName: "BuyHoldEarn Website",
   twitter: {
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://buyholdearn.com",
-    title: "BUY, HOLD, EARN, BURN",
+    title: "BUY, HOLD, EARN",
     description: "BuyHoldEarn Website",
-    siteName: "BUY, HOLD, EARN, BURN",
+    siteName: "BUY, HOLD, EARN",
     images: [
       {
         url: "https://buyholdearn.com/logo.jpg",
