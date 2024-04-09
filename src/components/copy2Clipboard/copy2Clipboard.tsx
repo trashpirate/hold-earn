@@ -26,7 +26,7 @@ export default function Copy2Clipboard(props: { text: string; copyText: string; 
     };
 
     return (
-        <div className="flex flex-row hover:cursor-pointer opacity-60 hover:opacity-100 transition-all duration-100 w-full justify-end h-8 my-auto">
+        <div className="flex flex-row hover:cursor-pointer opacity-60 hover:opacity-100 transition-all duration-100 w-full justify-start h-10 my-auto align-middle">
             <div onClick={copylink} className={`${props.textSize} ${props.textColor} text-ellipsis overflow-hidden my-auto`}>{props.text}</div>
             <div onClick={copylink} className="flex justify-center align-middle  my-auto">
                 <div className={`${props.textColor} ${props.iconSize} ml-2 mt-0 h-full align-middle w-4 `}>
