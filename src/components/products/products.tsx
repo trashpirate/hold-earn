@@ -63,7 +63,7 @@ export default function Products({ }: Props) {
                             <h1 className='font-bold text-center leading-8'>MINT LIVE NOW!</h1>
                         </div>
                     </Link>
-                    <Link href="https://www.ebay.com/usr/buyholdearn">
+                    <Link href="https://shop.buyholdearn.com">
                         <div className="ransition-all ease-in-out hover:duration-500 hover:text-orange-500 h-full flex flex-col items-center gap-5 rounded-3xl border-t-2  bg-white/5 backdrop-blur border-primary hover:bg-orange-500 hover:bg-opacity-10 px-5 py-12 w-full hover:border-orange-500 hover:border-2">
                             <div className=' rounded-full bg-black p-2 z-10  shadow-orange-500 shadow-inner'>
                                 <Image
@@ -75,8 +75,8 @@ export default function Products({ }: Props) {
 
                                 />
                             </div>
-                            <h1 className='mt-4 text-3xl font-bold text-center'>EARN MERCH</h1>
-                            <h1 className='font-bold text-center leading-8'>PURCHASE VARIOUS ITEMS ROCKING THE EARN LOGO</h1>
+                            <h1 className='mt-4 text-3xl font-bold text-center'>EARN SHOP</h1>
+                            <h1 className='font-bold text-center leading-8'>PURCHASE AMAZON GIFT CARDS WITH YOUR CRYPTO</h1>
                         </div>
                     </Link>
                     {/* <div className="ransition-all ease-in-out hover:duration-500 hover:text-orange-500 hover:border-orange-500 hover:border-2 h-full flex flex-col items-center gap-5 rounded-3xl border-t-2  bg-white/5 backdrop-blur border-primary hover:bg-orange-500 hover:bg-opacity-10 px-5 py-12 w-full">
