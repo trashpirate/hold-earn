@@ -79,20 +79,7 @@ export default function Products({ }: Props) {
                             <h1 className='font-bold text-center leading-8'>PURCHASE AMAZON GIFT CARDS WITH YOUR CRYPTO</h1>
                         </div>
                     </Link>
-                    {/* <div className="ransition-all ease-in-out hover:duration-500 hover:text-orange-500 hover:border-orange-500 hover:border-2 h-full flex flex-col items-center gap-5 rounded-3xl border-t-2  bg-white/5 backdrop-blur border-primary hover:bg-orange-500 hover:bg-opacity-10 px-5 py-12 w-full">
-                        <div className=' rounded-full bg-black p-2 z-10  shadow-orange-500 shadow-inner'>
-                            <Image
-                                className='h-full w-24 justify-self-center z-10 rounded-full'
-                                src="/merch.png"
-                                width={658}
-                                height={658}
-                                alt="merch"
 
-                            />
-                        </div>
-                        <h1 className='opacity-50 mt-4 text-3xl font-bold text-center'>MERCH</h1>
-                        <h1 className='opacity-50 font-bold text-center leading-8'>COMING SOON</h1>
-                    </div> */}
                 </div>
             </div>
         </section>

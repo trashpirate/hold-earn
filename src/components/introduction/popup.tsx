@@ -1,12 +1,12 @@
 import React from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import {Fragment, useState} from 'react'
+import { Fragment, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 type Props = {}
 
-export default function PopUp({}: Props) {
-    let [isOpen, setIsOpen] = useState(true)
+export default function PopUp({ }: Props) {
+  let [isOpen, setIsOpen] = useState(true)
 
   function closeModal() {
     setIsOpen(false)
@@ -17,7 +17,7 @@ export default function PopUp({}: Props) {
   }
   return (
     <>
-      
+
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -39,18 +39,18 @@ export default function PopUp({}: Props) {
                     className="text-2xl font-medium leading-2 text-primary"
                   >
                     FLAMLING COLLECTION LIVE NOW!
-                    </Dialog.Title>
-                    <div className='w-full flex justify-center h-fit'>
-                      <Image
-            src="/flameling_moving.gif"
-            width={300}
-            height={300}
-            style={{borderRadius: "25px", margin: "20px"}}
+                  </Dialog.Title>
+                  <div className='w-full flex justify-center h-fit'>
+                    <Image
+                      src="/nova_flameling.jpg"
+                      width={300}
+                      height={300}
+                      style={{ borderRadius: "25px", margin: "20px" }}
                       alt="flameling"
                       priority
-          />
-            
-          </div>
+                    />
+
+                  </div>
                   <div className="mt-2">
                     <p className="text-sm text-gray-200">
                       The adorable Flamelings embody the warmth and energy of the fire they are born from. Funny, powerful, brave, patient, and dependable, they reflect the diverse qualities of the EARN community.
@@ -62,11 +62,11 @@ export default function PopUp({}: Props) {
                     <Link
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-black hover:bg-orange-800 focus:outline-none hover:ring-2 hover:ring-orange-500 hover:ring-offset-2"
-                      href="https://flame.buyholdearn.com/"
+                      href="https://flamelings.buyholdearn.com/"
                     >
                       Launch App
-                      </Link>
-                      <button
+                    </Link>
+                    <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-black hover:bg-orange-800 focus:outline-none hover:ring-2 hover:ring-orange-500 hover:ring-offset-2"
                       onClick={closeModal}
