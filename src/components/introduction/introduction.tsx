@@ -75,8 +75,9 @@ export default function Introduction({ }: Props) {
 
             <div className='flex gap-5 flex-wrap pt-4'>
               <ChartButton url="https://www.dextools.io/app/en/ether/pair-explorer/0x32558f1214bd874c6cbc1ab545b28a18990ff7ee"></ChartButton>
-              <CustomButton url="https://app.buyholdearn.com/" name="Flames"></CustomButton>
-              <CustomButton url="https://flame.buyholdearn.com/" name="Flamelings"></CustomButton>
+              <CustomButton url="https://flames.buyholdearn.com/" name="Flames"></CustomButton>
+              <CustomButton url="https://flamelings.buyholdearn.com/" name="Flamelings"></CustomButton>
+              <CustomButton url="https://liquid.buyholdearn.com/" name="Liquid"></CustomButton>
             </div>
 
           </div>
