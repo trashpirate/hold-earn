@@ -28,12 +28,12 @@ export default function BuyButton() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-2 w-64 origin-top-right rounded-md bg-orange-500/70 backdrop-blur-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 mt-2 w-64 origin-top-right rounded-md backdrop-blur-lg bg-orange-500/90 py-1 ">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="https://app.uniswap.org/swap?outputCurrency=0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
-                  className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
+                  className={classNames(active ? 'bg-white/5 ' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold ')}
                 >
                   Buy ETH-EARN (Uniswap)
                 </a>
@@ -62,10 +62,10 @@ export default function BuyButton() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="https://pancakeswap.finance/swap?chain=base&outputCurrency=0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
+                  href="https://www.sushi.com/swap?chainId=8453&token0=NATIVE&token1=0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy BASE-EARN (PancakeSwap)
+                  Buy BASE-EARN (SushiSwap)
                 </a>
               )}
             </Menu.Item>
