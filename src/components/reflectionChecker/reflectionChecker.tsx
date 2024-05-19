@@ -1,11 +1,12 @@
 "use client";
 import { abi } from "../../assets/tokenABI";
 import { useEffect, useState } from "react";
-import { formatEther, isAddress } from "viem";
+import { formatEther, isAddress, getAddress } from "viem";
 
 import { Alchemy, AssetTransfersCategory, Network } from "alchemy-sdk";
 
 const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
+const BUYHOLDEARN_WALLET = getAddress("0x0cf66382d52C2D6c1D095c536c16c203117E2B2f");
 
 const config = {
   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
@@ -30,12 +31,15 @@ export default function ReflectionChecker() {
         category: [AssetTransfersCategory.ERC20],
       });
       let totalOutSum: number = 0;
-      let tax = 0.98;
-      if (account == "0x0cf66382d52C2D6c1D095c536c16c203117E2B2f") {
-        tax = 1;
-      }
+      let tax: number;
       for (let tx of outData.transfers) {
-        if (tx.value != null) {
+        if (tx.value !== null && tx.to !== null) {
+          if (getAddress(account) == BUYHOLDEARN_WALLET || getAddress(tx.to) == BUYHOLDEARN_WALLET) {
+            tax = 1;
+          }
+          else {
+            tax = 0.98;
+          }
           totalOutSum += tx.value / tax;
           // console.log("out: " + tx.value);
         }
