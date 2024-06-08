@@ -33,7 +33,7 @@ export default function PopUp({ }: Props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-sm transform overflow-hidden rounded-2xl bg-blue-200/10 backdrop-blur p-8 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-sm transform overflow-hidden rounded-2xl bg-blue-200/10 backdrop-blur p-8 text-left align-middle shadow-xl transition-all mt-20">
                   <Dialog.Title
                     as="h3"
                     className="text-2xl font-bold leading-2 text-cyan-400 text-center"
