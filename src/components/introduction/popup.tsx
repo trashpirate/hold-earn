@@ -33,42 +33,43 @@ export default function PopUp({ }: Props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white/5 backdrop-blur p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-blue-200/10 backdrop-blur p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-2xl font-medium leading-2 text-primary"
+                    className="text-2xl font-medium leading-2 text-cyan-400 text-center"
                   >
-                    FLAMLING COLLECTION LIVE NOW!
+                    LIQUID COLLECTION LIVE NOW!
                   </Dialog.Title>
                   <div className='w-full flex justify-center h-fit'>
                     <Image
-                      src="/nova_flameling.jpg"
+                      src="/liquid.jpg"
                       width={300}
                       height={300}
                       style={{ borderRadius: "25px", margin: "20px" }}
-                      alt="flameling"
+                      alt="liquid"
                       priority
                     />
 
                   </div>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-200">
-                      The adorable Flamelings embody the warmth and energy of the fire they are born from. Funny, powerful, brave, patient, and dependable, they reflect the diverse qualities of the EARN community.
+                    <p className="text-sm text-gray-200 text-justify">
+                      LIQUID is a limited NFT collection on Base chain designed to enhance liquidity within the EARN ecosystem and offer holders a stable return over 5 years.
                     </p>
-                    <p>Price: 100,000 EARN</p>
+                    <p className='text-cyan-400 font-bold'>Minimum 30% APY!</p>
+                    <p>Price: 500 USDC (BASE)</p>
                   </div>
 
                   <div className="mt-4 gap-4 flex">
                     <Link
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-black hover:bg-orange-800 focus:outline-none hover:ring-2 hover:ring-orange-500 hover:ring-offset-2"
-                      href="https://flamelings.buyholdearn.com/"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-cyan-400 px-4 py-2 text-sm font-medium text-black hover:bg-cyan-600 focus:outline-none hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
+                      href="https://liquid.buyholdearn.com/"
                     >
                       Launch App
                     </Link>
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-black hover:bg-orange-800 focus:outline-none hover:ring-2 hover:ring-orange-500 hover:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-cyan-400 px-4 py-2 text-sm font-medium text-black hover:bg-cyan-600 focus:outline-none hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
                       onClick={closeModal}
                     >
                       Close
