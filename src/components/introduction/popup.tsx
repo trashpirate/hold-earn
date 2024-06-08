@@ -33,19 +33,19 @@ export default function PopUp({ }: Props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-blue-200/10 backdrop-blur p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-sm transform overflow-hidden rounded-2xl bg-blue-200/10 backdrop-blur p-8 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-2xl font-medium leading-2 text-cyan-400 text-center"
+                    className="text-2xl font-bold leading-2 text-cyan-400 text-center"
                   >
-                    LIQUID COLLECTION LIVE NOW!
+                    MINT LIVE NOW!
                   </Dialog.Title>
                   <div className='w-full flex justify-center h-fit'>
                     <Image
+                      className='rounded-2xl my-5 h-auto w-full'
                       src="/liquid.jpg"
                       width={300}
                       height={300}
-                      style={{ borderRadius: "25px", margin: "20px" }}
                       alt="liquid"
                       priority
                     />
@@ -55,11 +55,15 @@ export default function PopUp({ }: Props) {
                     <p className="text-sm text-gray-200 text-justify">
                       LIQUID is a limited NFT collection on Base chain designed to enhance liquidity within the EARN ecosystem and offer holders a stable return over 5 years.
                     </p>
-                    <p className='text-cyan-400 font-bold'>Minimum 30% APY!</p>
-                    <p>Price: 500 USDC (BASE)</p>
+                    <div className='flex justify-between my-4'>
+                      <p className='leading-6 text-md'>Price: 500 USDC</p>
+                      <p className='text-cyan-400 font-bold leading-6 text-md'>Minimum 30% APY!</p>
+
+                    </div>
+
                   </div>
 
-                  <div className="mt-4 gap-4 flex">
+                  <div className="mt-2 gap-4 flex justify-between">
                     <Link
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-cyan-400 px-4 py-2 text-sm font-medium text-black hover:bg-cyan-600 focus:outline-none hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
