@@ -76,7 +76,7 @@ export default function Products({ }: Props) {
                                 />
                             </div>
                             <h1 className='mt-4 text-3xl font-bold text-center'>EARN SHOP</h1>
-                            <h1 className='font-bold text-center leading-8'>PURCHASE AMAZON GIFT CARDS WITH YOUR CRYPTO</h1>
+                            <h1 className='font-bold text-center leading-8'>SHOP WITH EARN</h1>
                         </div>
                     </Link>
 
