@@ -57,7 +57,7 @@ export default function Footer({ }: Props) {
             </Link>
           </div>
           <div className='text-sm text-white text-opacity-30 text-left sm:text-right'>
-            Designed & Developed by <Link className='hover:text-primary' href="https://twitter.com/N0_crypto">@N0_crypto</Link>
+            Powered by <Link className='hover:text-primary' href="https://t.me/EARNServices">EARN Services</Link>
           </div>
         </div>
 

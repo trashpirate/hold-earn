@@ -16,7 +16,7 @@ export default function Home() {
     <main className={styles.main}>
       <Navbar></Navbar>
       <Introduction></Introduction>
-      <Partnership></Partnership>
+      {/* <Partnership></Partnership> */}
       <Tokenomics></Tokenomics>
       <Buy></Buy>
       <Products></Products>
