@@ -15,7 +15,7 @@ export default function Introduction({ }: Props) {
   return (
     <section id="introduction" className='px-7 my-32 scroll-m-36'>
       <div className='flex justify-center w-full sm:hidden'>
-        <Link href="/partnership" className=' bg-primary text-black uppercase font-bold rounded-xl py-2 px-4 leading-6 mx-auto duration-500 hover:scale-110 transform hover:bg-primary/80'>Partner with us!</Link>
+        <Link href="https://t.me/buyholdearn" className=' bg-primary text-black uppercase font-bold rounded-xl py-2 px-4 leading-6 mx-auto duration-500 hover:scale-110 transform hover:bg-primary/80'>GET FREE $EARN!</Link>
 
       </div>
 
