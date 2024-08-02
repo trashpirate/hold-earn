@@ -117,42 +117,7 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
         holderPercentage: "1",
         launch: "05 Apr '24"
     }],
-        ["0x156", {
-        id: 156,
-        name: "FLAMELING 156",
-        refLink: "/0x156",
-        nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/156",
-        imageUrl: "/flamelings/0x156.gif",
-        contract: "0xe9782BaDC7640BFC2D1ED94346F89dF1617AB4c0",
-        pair: "0x990706345adef4368d3603bf1a5e471ffb400e4a",
-        mc: 0,
-        ticker: "0X156",
-        scanLink: "https://bscscan.com/token/0xe9782badc7640bfc2d1ed94346f89df1617ab4c0#code",
-        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0x990706345adef4368d3603bf1a5e471ffb400e4a?t=1706891959813",
-        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0x990706345adef4368d3603bf1a5e471ffb400e4a",
-        tgLink: "https://t.me/FLAMELING0X156",
-        xLink: "https://twitter.com/0x156flameling",
-        holderPercentage: "2",
-        launch: "06 Mar '24"
-    }],
-        ["0x159", {
-        id: 159,
-        name: "FLAMELING 0x159",
-        refLink: "/0x159",
-        nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/159",
-        imageUrl: "/flamelings/0x159.gif",
-        contract: "0x7424e6d7288aff9a99c58560b64bab0ac2730027",
-        pair: "0x12983b8278a58b77fcb21ac4dc672aa333da3adc",
-        mc: 0,
-        ticker: "0X159",
-        scanLink: "https://bscscan.com/token/0x7424e6d7288aff9a99c58560b64bab0ac2730027#code",
-        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0x12983b8278a58b77fcb21ac4dc672aa333da3adc?t=1706891959813",
-        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0x12983b8278a58b77fcb21ac4dc672aa333da3adc",
-        tgLink: "https://t.me/FLAMELING0X159",
-        xLink: "https://twitter.com/Stinger68K",
-        holderPercentage: "2",
-        launch: "02 Feb '24"
-    }],
+       
         ["0x177", {
         id: 177,
         name: "FLAMELING 0x177",
@@ -179,41 +144,5 @@ export const flamelingTokens = new Map<string, FlamelingToken>([
                 name: "Store",
                 link: "https://0X177.etsy.com"
                 }]
-    }],
-        ["0x222", {
-        id: 222,
-        name: "FLAMELING 0x222",
-        refLink: "/0x222",
-        nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/222",
-        imageUrl: "/flamelings/0x222.gif",
-        contract: "0x85063a8c52c81f8c270d10bc2056d5e703157de4",
-        pair: "0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
-        mc: 0,
-        ticker: "0X222",
-        scanLink: "https://bscscan.com/token/0x85063a8c52c81f8c270d10bc2056d5e703157de4#code",
-        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
-        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0xa1728386594cbfaa9d0a4b533d50346fc98ae6a8",
-        tgLink: "https://t.me/FLAMELING0X222",
-        xLink: "https://twitter.com/Rugs0x222",
-        holderPercentage: "4",
-        launch: "14 Mar '24"
-    }],
-        ["0x237", {
-        id: 237,
-        name: "FLAMELING 0x237",
-        refLink: "/0x237",
-        nftUrl: "https://opensea.io/assets/ethereum/0x49902747796c2abcc5ea640648551ddbc2c50ba2/237",
-        imageUrl: "/flamelings/0x237.gif",
-        contract: "0x517316ab1bf91296c821a2ab98e3d0924a625237",
-        pair: "0xbee0d2e7172aa4fcfbe2fa6a30bf1af973df0204",
-        mc: 0,
-        ticker: "0X237",
-        scanLink: "https://bscscan.com/token/0x517316ab1bf91296c821a2ab98e3d0924a625237#code",
-        chartLink: "https://www.dextools.io/app/en/bnb/pair-explorer/0xbee0d2e7172aa4fcfbe2fa6a30bf1af973df0204",
-        lockLink: "https://app.uncx.network/amm/pancake-v2/pair/0xbee0d2e7172aa4fcfbe2fa6a30bf1af973df0204",
-        tgLink: "https://t.me/FLAMELING0X237",
-        xLink: "https://twitter.com/Riches0x237",
-        holderPercentage: "3",
-        launch: "14 Mar '24"
     }]
 ])
