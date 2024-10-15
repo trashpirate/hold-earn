@@ -62,10 +62,10 @@ export default function BuyButton() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="https://www.sushi.com/swap?chainId=8453&token0=NATIVE&token1=0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66"
+                  href="https://app.uniswap.org/swap?chain=base&outputCurrency=0x803b629c339941e2b77d2dc499dac9e1fd9eac66"
                   className={classNames(active ? 'bg-white/5' : '', 'block px-4 py-2 text-sm text-gray-300 font-bold')}
                 >
-                  Buy BASE-EARN (SushiSwap)
+                  Buy BASE-EARN (Uniswap)
                 </a>
               )}
             </Menu.Item>
