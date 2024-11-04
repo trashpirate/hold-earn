@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: left;
   vertical-align: middle;
-    font-size: 18px;
+    font-size: px;
   cursor:pointer;
   width: fit-content;
   transition-duration: 0.4s;
@@ -41,7 +41,7 @@
 }
 
 .container h3 {
-  line-height: 2rem;
+  line-height: 1.3rem;
     text-overflow: ellipsis;  
     margin: 0px auto 0xp auto;
     cursor: pointer;          
@@ -50,6 +50,7 @@
     white-space: nowrap;
     color: #FF6B10;
     opacity: 0.6;
+    font-size: inherit;
 }
 
 .container h3:hover {

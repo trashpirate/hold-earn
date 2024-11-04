@@ -12,7 +12,7 @@ const USDT = "0x55d398326f99059fF775485246999027B3197955";
 
 const client = createPublicClient({
     chain: bsc,
-    transport: http(`https://rpc.ankr.com/bsc/${process.env.NEXT_PUBLIC_ANKR_API_KEY}`)
+    transport: http(`https://bnb-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}`)
 })
 
 const BNB_ID = 1839;
