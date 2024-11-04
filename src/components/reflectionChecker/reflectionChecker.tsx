@@ -17,7 +17,7 @@ const alchemy = new Alchemy(config);
 
 export default function ReflectionChecker() {
   const [address, setAddress] = useState<string | null>(
-    "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E"
+    null
   );
   const [reflections, setReflections] = useState<number | null>(null);
 
@@ -77,6 +77,7 @@ export default function ReflectionChecker() {
       setReflections(reflect);
     }
     if (isAddress(address as string)) {
+      console.log("address: " + address);
       getReflections(address as string);
     }
   }, [address]);
