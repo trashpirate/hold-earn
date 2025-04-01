@@ -28,7 +28,7 @@ export default function Introduction({ }: Props) {
             <div className='my-4 flex gap-4 w-full pl-1'>
               <SocialIcon network="telegram" url="https://t.me/buyholdearn" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="Telegram" />
               <SocialIcon network="x" url="https://twitter.com/buyholdearn" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="X" />
-              <SocialIcon network="linkedin" url="https://www.linkedin.com/company/earnecosystem" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="LinkedIn" />
+              <SocialIcon network="linkedin" url="https://www.linkedin.com/showcase/holdearn" bgColor="#FF6B10aa" style={{ height: 30, width: 30 }} label="LinkedIn" />
               <Link href="https://etherscan.io/address/0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E#code">
                 <Image
                   src="/etherscan.png"
@@ -66,7 +66,7 @@ export default function Introduction({ }: Props) {
                 <ChartButton url="https://www.dextools.io/app/en/ether/pair-explorer/0x32558f1214bd874c6cbc1ab545b28a18990ff7ee"></ChartButton>
                 <CustomButton url="https://flames.buyholdearn.com/" name="Flames"></CustomButton>
                 <CustomButton url="https://flamelings.buyholdearn.com/" name="Flamelings"></CustomButton>
-                <CustomButton url="https://liquid.buyholdearn.com/" name="Liquid"></CustomButton>
+                <CustomButton url="https://app.pwn.xyz/asset/Base/0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66/lend" name="Lend"></CustomButton>
               </div>
             </div>
 
