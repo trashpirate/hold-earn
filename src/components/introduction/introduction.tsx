@@ -66,7 +66,7 @@ export default function Introduction({ }: Props) {
                 <ChartButton url="https://www.dextools.io/app/en/ether/pair-explorer/0x32558f1214bd874c6cbc1ab545b28a18990ff7ee"></ChartButton>
                 <CustomButton url="https://flames.buyholdearn.com/" name="Flames"></CustomButton>
                 <CustomButton url="https://flamelings.buyholdearn.com/" name="Flamelings"></CustomButton>
-                <CustomButton url="https://app.pwn.xyz/asset/Base/0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66/lend" name="Lend"></CustomButton>
+                <CustomButton url="https://app.pwn.xyz/asset/Base/0x803b629C339941e2b77D2dC499DAc9e1fD9eAC66/lend?ref=0xc18a0029637f1803DC347761CD10dD3b5c7A7eF5" name="Lend"></CustomButton>
               </div>
             </div>
 
