@@ -38,7 +38,9 @@ export async function GET() {
     return NextResponse.json(circulating_supply, { 
       status: 200,
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=300'
+        'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=60',
+        'CDN-Cache-Control': 'public, max-age=60, stale-while-revalidate=60',
+        'Vercel-CDN-Cache-Control': 'public, max-age=60, stale-while-revalidate=60'
       }
     });
   } catch (error) {
