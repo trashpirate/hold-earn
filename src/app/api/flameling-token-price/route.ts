@@ -10,9 +10,10 @@ import { flamelingABI } from "@/assets/flamelingTokenABI";
 const WBNB = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
 const USDT = "0x55d398326f99059fF775485246999027B3197955";
 
+// Create client outside functions to reuse it
 const client = createPublicClient({
     chain: bsc,
-    transport: http(`https://bnb-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}`)
+    transport: http(`https://bnb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`)
 })
 
 const BNB_ID = 1839;
@@ -23,7 +24,7 @@ async function getBNBPrice(coinId: number) {
       "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest",
       {
         headers: {
-          "X-CMC_PRO_API_KEY": process.env.NEXT_PUBLIC_CMC_API_KEY, // Replace with your CoinMarketCap API key
+          "X-CMC_PRO_API_KEY": process.env.CMC_API_KEY, // Replace with your CoinMarketCap API key
           ["Content-Type"]: "application/json",
         },
         params: {
@@ -107,22 +108,50 @@ async function getFlamelingTokenPrice(tokenContract: string, pair: string) {
 
 
 export async function GET() {
-  // const bnbdexPrice = await getBNBUSDTPrice();
-  // console.log(bnbdexPrice)
-  const bnbPrice = await getBNBPrice(BNB_ID);
-  // console.log(bnbPrice)
-  const newTokenData = new Map(flamelingTokens);
-  let jsonObject: { [key: string]: number } = {};
-  for (let [key, value] of newTokenData) {
-    const tokenPrice = await getFlamelingTokenPrice(value.contract, value.pair);
-    if (tokenPrice !== undefined) {
-          const mc = tokenPrice * bnbPrice * 1000000000
-          jsonObject[key] = mc;
+  try {
+    // Check if API keys are available
+    if (!process.env.ALCHEMY_API_KEY || !process.env.CMC_API_KEY) {
+      console.error('Required environment variables are not set');
+      return NextResponse.json(
+        { error: 'API configuration error' }, 
+        { status: 500 }
+      );
+    }
+
+    // const bnbdexPrice = await getBNBUSDTPrice();
+    // console.log(bnbdexPrice)
+    const bnbPrice = await getBNBPrice(BNB_ID);
+    
+    if (!bnbPrice) {
+      throw new Error('Failed to fetch BNB price');
+    }
+    
+    // console.log(bnbPrice)
+    const newTokenData = new Map(flamelingTokens);
+    let jsonObject: { [key: string]: number } = {};
+    
+    for (let [key, value] of newTokenData) {
+      const tokenPrice = await getFlamelingTokenPrice(value.contract, value.pair);
+      if (tokenPrice !== undefined) {
+            const mc = tokenPrice * bnbPrice * 1000000000
+            jsonObject[key] = mc;
+        }
+    }
+    
+    const json = JSON.stringify(jsonObject);
+
+    // Add cache headers to refresh every 5 minutes
+    return NextResponse.json(json, { 
+      status: 200,
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=300'
       }
-
+    });
+  } catch (error) {
+    console.error('Error fetching flameling token prices:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch flameling token prices' }, 
+      { status: 500 }
+    );
   }
-  
-  const json = JSON.stringify(jsonObject);
-
-  return NextResponse.json(json, { status: 200 });
 }

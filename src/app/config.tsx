@@ -8,7 +8,7 @@ export default function getWagmiConfig(useTest: string) {
     [
       jsonRpcProvider({
         rpc: (chain) => ({
-          http: `https://eth-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}`,
+          http: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
         }),
       }),
     ]
