@@ -10,7 +10,7 @@ async function getTokenPrice(coinId: number) {
       "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest",
       {
         headers: {
-          "X-CMC_PRO_API_KEY": process.env.NEXT_PUBLIC_CMC_API_KEY, // Replace with your CoinMarketCap API key
+          "X-CMC_PRO_API_KEY": process.env.CMC_API_KEY, // Replace with your CoinMarketCap API key
           ["Content-Type"]: "application/json",
         },
         params: {
@@ -30,7 +30,34 @@ async function getTokenPrice(coinId: number) {
 }
 
 export async function GET() {
-  const price = await getTokenPrice(BNB_ID);
-  // const price = 1;
-  return NextResponse.json(price, { status: 200 });
+  try {
+    // Check if API key is available
+    if (!process.env.CMC_API_KEY) {
+      console.error('CMC_API_KEY environment variable is not set');
+      return NextResponse.json(
+        { error: 'API configuration error' }, 
+        { status: 500 }
+      );
+    }
+
+    const price = await getTokenPrice(BNB_ID);
+    
+    if (price === undefined) {
+      throw new Error('Failed to fetch token price from CMC');
+    }
+    
+    // Add cache headers to refresh every 5 minutes
+    return NextResponse.json(price, { 
+      status: 200,
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=300'
+      }
+    });
+  } catch (error) {
+    console.error('Error fetching CMC price:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch token price' }, 
+      { status: 500 }
+    );
+  }
 }

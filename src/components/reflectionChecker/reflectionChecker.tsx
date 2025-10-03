@@ -1,103 +1,90 @@
 "use client";
-import { abi } from "../../assets/tokenABI";
 import { useEffect, useState } from "react";
-import { formatEther, isAddress, getAddress } from "viem";
+import { isAddress } from "viem";
 
-import { Alchemy, AssetTransfersCategory, Network } from "alchemy-sdk";
-
-const TOKEN_ADDRESS = "0x0b61C4f33BCdEF83359ab97673Cb5961c6435F4E";
-const BUYHOLDEARN_WALLET = getAddress("0x0cf66382d52C2D6c1D095c536c16c203117E2B2f");
-
-const config = {
-  apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
-  network: process.env.NEXT_PUBLIC_TESTNET == "true" ? Network.ETH_GOERLI : Network.ETH_MAINNET,
-};
-
-const alchemy = new Alchemy(config);
+interface ReflectionData {
+  reflections: number;
+  balance: number;
+  pureBalance: number;
+  totalInSum: number;
+  totalOutSum: number;
+}
 
 export default function ReflectionChecker() {
-  const [address, setAddress] = useState<string | null>(
-    null
-  );
-  const [reflections, setReflections] = useState<number | null>(null);
+  const [address, setAddress] = useState<string>("");
+  const [reflectionData, setReflectionData] = useState<ReflectionData | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    async function getReflections(account: string) {
-      const outData = await alchemy.core.getAssetTransfers({
-        fromBlock: "0x1174868",
-        fromAddress: account,
-        excludeZeroValue: true,
-        contractAddresses: [TOKEN_ADDRESS],
-        category: [AssetTransfersCategory.ERC20],
-      });
-      let totalOutSum: number = 0;
-      let tax: number;
-      for (let tx of outData.transfers) {
-        if (tx.value !== null && tx.to !== null) {
-          if (getAddress(account) == BUYHOLDEARN_WALLET || getAddress(tx.to) == BUYHOLDEARN_WALLET) {
-            tax = 1;
-          }
-          else {
-            tax = 0.98;
-          }
-          totalOutSum += tx.value / tax;
-          // console.log("out: " + tx.value);
-        }
-      }
-      // console.log("total out: " + totalOutSum);
+    async function fetchReflections(walletAddress: string) {
+      if (!isAddress(walletAddress)) return;
 
-      const inData = await alchemy.core.getAssetTransfers({
-        fromBlock: "0x1174868",
-        toAddress: account,
-        excludeZeroValue: true,
-        contractAddresses: [TOKEN_ADDRESS],
-        category: [AssetTransfersCategory.ERC20],
-      });
-      let totalInSum: number = 0;
-      for (let tx of inData.transfers) {
-        if (tx.value != null) {
-          totalInSum += tx.value;
-          // console.log("in: " + tx.value);
-        }
-      }
-      // console.log("total in: " + totalInSum);
-      const pureBalance = totalInSum - totalOutSum;
-      console.log("pure balance: " + pureBalance);
+      setLoading(true);
+      setError(null);
 
-      const accData = await alchemy.core.getTokenBalances(account, [TOKEN_ADDRESS]);
-      const balanceBigint = accData.tokenBalances[0].tokenBalance;
-      let reflect: number | null = null;
-      if (balanceBigint != null) {
-        const balance = Number(formatEther(BigInt(balanceBigint)));
-        // console.log("balance: " + balance);
-        reflect = balance - pureBalance;
-        if (reflect < 0) reflect = 0;
-        // console.log("reflections: " + reflect);
+      try {
+        const response = await fetch(`/api/reflections?address=${encodeURIComponent(walletAddress)}`);
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Failed to fetch reflections');
+        }
+
+        const data: ReflectionData = await response.json();
+        setReflectionData(data);
+      } catch (err) {
+        console.error('Error fetching reflections:', err);
+        setError(err instanceof Error ? err.message : 'Failed to fetch reflections');
+        setReflectionData(null);
+      } finally {
+        setLoading(false);
       }
-      setReflections(reflect);
     }
-    if (isAddress(address as string)) {
-      console.log("address: " + address);
-      getReflections(address as string);
+
+    if (address.trim()) {
+      // Debounce the API call
+      const timeoutId = setTimeout(() => {
+        fetchReflections(address.trim());
+      }, 500);
+
+      return () => clearTimeout(timeoutId);
+    } else {
+      setReflectionData(null);
+      setError(null);
     }
   }, [address]);
 
   return (
-    <div className=" bg-white/5 p-4 rounded-lg  h-fit">
+    <div className="bg-white/5 p-4 rounded-lg h-fit">
       <h3 className="font-bold text-lg">EARN Reflection Checker</h3>
-      <form >
+      <form>
         <input
-          className='w-full h-8 p-2 indent-1 border-gray-300 rounded-md text-black'
-          type="string"
+          className="w-full h-8 p-2 indent-1 border-gray-300 rounded-md text-black"
+          type="text"
           placeholder="Enter wallet address"
-          onChange={(e) => {
-            setAddress(e.target.value);
-          }}
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
       </form>
 
-      <div className="h-8">{`${reflections != null ? "Reflections: " + reflections?.toLocaleString() + " EARN" : ""
-        }`}</div>
+      <div className="h-8 mt-2">
+        {loading && <div className="text-yellow-400">Loading...</div>}
+        {error && <div className="text-red-400">Error: {error}</div>}
+        {reflectionData && !loading && !error && (
+          <div className="text-green-400">
+            Reflections: {reflectionData.reflections.toLocaleString()} EARN
+          </div>
+        )}
+      </div>
+
+      {/* Optional: Show additional details */}
+      {reflectionData && !loading && !error && (
+        <div className="text-sm text-gray-300 mt-2">
+          <div>Current Balance: {reflectionData.balance.toLocaleString()} EARN</div>
+          <div>Pure Balance: {reflectionData.pureBalance.toLocaleString()} EARN</div>
+        </div>
+      )}
     </div>
   );
 }
