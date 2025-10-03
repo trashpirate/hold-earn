@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import axios from 'axios';
 
+// Force this route to be dynamic and not cached by ISR
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const ETH_ID = 1027;
 const BNB_ID = 1839;
 
